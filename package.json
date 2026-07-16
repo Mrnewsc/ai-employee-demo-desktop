@@ -1,0 +1,50 @@
+{
+  "name": "ai-employee-demo-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "数员科技 AI数字员工",
+  "type": "module",
+  "config": {
+    "electron_builder_binaries_mirror": "https://npmmirror.com/mirrors/electron-builder-binaries/"
+  },
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "electron:dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron electron/main.cjs\"",
+    "check": "tsc --noEmit",
+    "build": "tsc -b && vite build",
+    "capture:previews": "npm run build && node scripts/capture-previews.mjs",
+    "dist:win": "electron-builder --win --x64",
+    "dist:mac": "electron-builder --mac dmg zip --universal"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "framer-motion": "12.42.2",
+    "lucide-react": "1.24.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "recharts": "3.9.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.2",
+    "concurrently": "latest",
+    "electron": "43.1.1",
+    "electron-builder": "latest",
+    "tailwindcss": "4.3.2",
+    "typescript": "latest",
+    "vite": "8.1.5",
+    "wait-on": "latest"
+  },
+  "build": {
+    "appId": "com.shuyuan.aiemployeedemo",
+    "productName": "数员科技 AI数字员工",
+    "directories": { "output": "release" },
+    "electronDist": "node_modules/electron/dist",
+    "files": ["dist/**/*", "electron/**/*", "package.json"],
+    "win": { "target": "nsis", "signAndEditExecutable": false },
+    "mac": {
+      "target": ["dmg", "zip"],
+      "category": "public.app-category.business"
+    }
+  }
+}

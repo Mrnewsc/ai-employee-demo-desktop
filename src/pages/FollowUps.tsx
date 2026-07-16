@@ -1,0 +1,1 @@
+export { FollowUps } from './ModulePages';

@@ -1,0 +1,13 @@
+node_modules
+dist
+release
+.tools
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+.cache
+.tmp
+tmp
+*.log
+.DS_Store
+ai-employee-demo-install-*

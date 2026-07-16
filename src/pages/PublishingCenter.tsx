@@ -1,0 +1,1 @@
+export { PublishingCenter } from './ModulePages';
