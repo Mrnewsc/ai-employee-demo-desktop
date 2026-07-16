@@ -33,6 +33,59 @@ jobs:
       - name: Build renderer
         run: npm run build
 
+      - name: Use electron-builder managed Electron runtime
+        run: node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync('package.json','utf8')); delete p.build.electronDist; fs.writeFileSync('package.json', JSON.stringify(p,null,2)+'\n');"
+
+      - name: Build unsigned Universal DMG and ZIP
+        run: npm run dist:mac -- --publish never
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+
+      - name: Upload macOS artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: shuyuan-ai-digital-employee-macos-universal
+          path: |
+            release/*.dmg
+            release/*.zip
+            Mac安装说明.txt
+          if-no-files-found: error
+          retention-days: 30
+name: Build macOS Universal Demo
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '**'
+      - '.github/workflows/build-mac.yml'
+
+jobs:
+  build-mac:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install React type declarations
+        run: npm install --no-save @types/react @types/react-dom
+
+      - name: TypeScript check
+        run: npm run check
+
+      - name: Build renderer
+        run: npm run build
+
       - name: Build unsigned Universal DMG and ZIP
         run: npm run dist:mac
         env:
