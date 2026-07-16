@@ -33,8 +33,9 @@ jobs:
       - name: Build renderer
         run: npm run build
 
-      - name: Use electron-builder managed Electron runtime
-        run: node -e "const fs=require('fs'); const p=JSON.parse(fs.readFileSync('package.json','utf8')); delete p.build.electronDist; fs.writeFileSync('package.json', JSON.stringify(p,null,2)+'\n');"
+      - name: Remove Windows-only electronDist
+        run: |
+          node -e "const fs=require('fs'); const p=require('./package.json'); if(p.build) delete p.build.electronDist; fs.writeFileSync('package.json', JSON.stringify(p, null, 2) + '\n');"
 
       - name: Build unsigned Universal DMG and ZIP
         run: npm run dist:mac -- --publish never
