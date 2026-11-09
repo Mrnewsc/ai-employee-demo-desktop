@@ -18,7 +18,7 @@ import { Settings } from './pages/Settings';
 export default function App() {
   const { activePage, navigate } = useApp();
   const preview = new URLSearchParams(window.location.search).get('preview');
-  const previewPage = preview === 'dashboard' ? 'dashboard' : preview === 'content-generator' ? 'content' : preview === 'ai-reception' ? 'reception' : preview === 'roi-calculator' ? 'roi' : null;
+  const previewPage = preview === 'dashboard' ? 'dashboard' : preview === 'content-generator' ? 'content' : preview === 'ai-reception' || preview === 'real-analysis' ? 'reception' : preview === 'roi-calculator' ? 'roi' : preview === 'product-catalog' ? 'company' : null;
   useEffect(() => { if (previewPage && activePage !== previewPage) navigate(previewPage); }, [previewPage, activePage, navigate]);
   const page = previewPage ?? activePage;
   const content = page === 'dashboard' ? <Dashboard />

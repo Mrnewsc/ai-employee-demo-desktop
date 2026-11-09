@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "passed": true,
+  "executedAt": "2026-08-08T05:10:45.427Z",
+  "packaged": true,
+  "renderer": {
+    "concurrent": {
+      "durationMs": 1489,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ],
+      "documentTypes": [
+        "pdf",
+        "docx",
+        "xlsx"
+      ]
+    },
+    "ocr": {
+      "durationMs": 1184,
+      "status": "completed",
+      "rawTextLength": 87,
+      "confidence": 0.9,
+      "warningCodes": [
+        "ocr_character_ambiguity"
+      ]
+    },
+    "cancellation": {
+      "observedStage": "rendering-page",
+      "status": "cancelled",
+      "errorCode": "JOB_CANCELLED",
+      "resourcesCleaned": true
+    },
+    "workerFailure": {
+      "status": "failed",
+      "errorCode": "FILE_CORRUPTED",
+      "resourcesCleaned": true
+    },
+    "security": {
+      "invalidRequestCode": "INVALID_REQUEST",
+      "tokenLeaksPath": false,
+      "resultLeaksPath": false,
+      "exposesIpcRenderer": false
+    },
+    "heartbeat": {
+      "ticks": 228,
+      "maxDriftMs": 12.300000011920929
+    }
+  },
+  "mainEventLoop": {
+    "meanDelayMs": 30.11,
+    "maxDelayMs": 100.34
+  },
+  "cleanup": {
+    "stagingEmpty": true,
+    "jobsEmpty": true
+  },
+  "assertions": {
+    "concurrentCompleted": true,
+    "fourTypesParsed": true,
+    "ocrProducedText": true,
+    "cancellationFinal": true,
+    "workerFailureRecovered": true,
+    "invalidIdRejected": true,
+    "noPathLeak": true,
+    "noRawIpc": true,
+    "tempCleaned": true,
+    "rendererResponsive": true
+  },
+  "resourceLocations": {
+    "workerExists": true,
+    "tessdataExists": true,
+    "tesseractWorkerExists": true
+  }
+}

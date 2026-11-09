@@ -1,0 +1,265 @@
+{
+  "schemaVersion": "1.0",
+  "scope": "provider-connectivity-only",
+  "usesCustomerFile": false,
+  "usesAiApi": false,
+  "executedAt": "2026-08-10T10:34:31.190Z",
+  "healthCheckSkipped": true,
+  "healthCheckReason": "避免对公开来源执行与本次候选检索重复的网络请求",
+  "result": {
+    "schemaVersion": "1.0",
+    "requestId": "provider-connectivity-smoke",
+    "extractedProductId": "connectivity-car-phone-holder",
+    "searchReason": "test-harness",
+    "queries": [
+      {
+        "schemaVersion": "1.0",
+        "queryId": "query_1_fe34e7eb",
+        "text": "车载手机支架 ABS 硅胶",
+        "sourceFields": [
+          "productName",
+          "material"
+        ]
+      }
+    ],
+    "candidates": [
+      {
+        "schemaVersion": "1.0",
+        "candidateId": "public_f58c5c2b",
+        "title": "【硅胶车载手机支架】_硅胶车载手机支架品牌/图片/价格_硅胶车载手机支架批发_阿里巴巴 - 第17页",
+        "normalizedTitle": "硅胶车载手机支架 硅胶车载手机支架品牌 图片 价格 硅胶车载手机支架批发 阿里巴巴 第17页",
+        "source": "360搜索公开索引",
+        "sourceType": "search-engine-index",
+        "url": "https://s.1688.com/kq/-B9E8BDBAB3B5D4D8CAD6BBFAD6A7BCDC.html?beginPage=17",
+        "domain": "s.1688.com",
+        "imageUrl": null,
+        "priceText": null,
+        "currency": null,
+        "moq": null,
+        "supplierName": null,
+        "location": null,
+        "specifications": {},
+        "material": null,
+        "description": null,
+        "searchQuery": "车载手机支架 ABS 硅胶",
+        "matchedSignals": [
+          "产品名称高度相关",
+          "材料相关"
+        ],
+        "conflictingSignals": [],
+        "score": 0.3569,
+        "retrievedAt": "2026-08-10T10:34:31.098Z",
+        "needsHumanReview": true,
+        "sourceEvidence": [
+          {
+            "schemaVersion": "1.0",
+            "evidenceId": "so_1e207a2f",
+            "evidenceType": "search-result",
+            "sourceUrl": "https://www.so.com/s?q=%E8%BD%A6%E8%BD%BD%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6%20ABS%20%E7%A1%85%E8%83%B6",
+            "retrievedAt": "2026-08-10T10:34:31.098Z",
+            "title": "【硅胶车载手机支架】_硅胶车载手机支架品牌/图片/价格_硅胶车载手机支架批发_阿里巴巴 - 第17页",
+            "snippet": null,
+            "imageUrl": null,
+            "supportsFields": [
+              "title"
+            ]
+          }
+        ]
+      },
+      {
+        "schemaVersion": "1.0",
+        "candidateId": "public_a45c4d8a",
+        "title": "车载手机支架硅胶-车载手机支架硅胶品牌、图片、排行榜 - 阿里巴巴",
+        "normalizedTitle": "车载手机支架硅胶 车载手机支架硅胶品牌 图片 排行榜 阿里巴巴",
+        "source": "360搜索公开索引",
+        "sourceType": "search-engine-index",
+        "url": "http://m.1688.com/brand/-B3B5D4D8CAD6BBFAD6A7BCDCB9E8BDBA.html",
+        "domain": "m.1688.com",
+        "imageUrl": null,
+        "priceText": null,
+        "currency": null,
+        "moq": null,
+        "supplierName": null,
+        "location": null,
+        "specifications": {},
+        "material": null,
+        "description": null,
+        "searchQuery": "车载手机支架 ABS 硅胶",
+        "matchedSignals": [
+          "产品名称高度相关",
+          "材料相关"
+        ],
+        "conflictingSignals": [],
+        "score": 0.3569,
+        "retrievedAt": "2026-08-10T10:34:31.098Z",
+        "needsHumanReview": true,
+        "sourceEvidence": [
+          {
+            "schemaVersion": "1.0",
+            "evidenceId": "so_fdf9f083",
+            "evidenceType": "search-result",
+            "sourceUrl": "https://www.so.com/s?q=%E8%BD%A6%E8%BD%BD%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6%20ABS%20%E7%A1%85%E8%83%B6",
+            "retrievedAt": "2026-08-10T10:34:31.098Z",
+            "title": "车载手机支架硅胶-车载手机支架硅胶品牌、图片、排行榜 - 阿里巴巴",
+            "snippet": null,
+            "imageUrl": null,
+            "supportsFields": [
+              "title"
+            ]
+          }
+        ]
+      },
+      {
+        "schemaVersion": "1.0",
+        "candidateId": "public_2bc410e8",
+        "title": "飞利浦车载手机支架:硅胶吸附黑科技,让导航稳如 焊 在仪表台_车载支架_什么值得买",
+        "normalizedTitle": "飞利浦车载手机支架 硅胶吸附黑科技 让导航稳如 焊 在仪表台 车载支架 什么值得买",
+        "source": "360搜索公开索引",
+        "sourceType": "search-engine-index",
+        "url": "https://post.smzdm.com/p/a0vxnq29/",
+        "domain": "post.smzdm.com",
+        "imageUrl": null,
+        "priceText": null,
+        "currency": null,
+        "moq": null,
+        "supplierName": null,
+        "location": null,
+        "specifications": {},
+        "material": null,
+        "description": null,
+        "searchQuery": "车载手机支架 ABS 硅胶",
+        "matchedSignals": [
+          "产品名称高度相关",
+          "材料相关"
+        ],
+        "conflictingSignals": [],
+        "score": 0.3569,
+        "retrievedAt": "2026-08-10T10:34:31.098Z",
+        "needsHumanReview": true,
+        "sourceEvidence": [
+          {
+            "schemaVersion": "1.0",
+            "evidenceId": "so_33edf0f2",
+            "evidenceType": "search-result",
+            "sourceUrl": "https://www.so.com/s?q=%E8%BD%A6%E8%BD%BD%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6%20ABS%20%E7%A1%85%E8%83%B6",
+            "retrievedAt": "2026-08-10T10:34:31.098Z",
+            "title": "飞利浦车载手机支架:硅胶吸附黑科技,让导航稳如 焊 在仪表台_车载支架_什么值得买",
+            "snippet": null,
+            "imageUrl": null,
+            "supportsFields": [
+              "title"
+            ]
+          }
+        ]
+      },
+      {
+        "schemaVersion": "1.0",
+        "candidateId": "public_af29a44f",
+        "title": "硅胶磁吸,埃普LP-1S车载手机支架仅49_网易数码",
+        "normalizedTitle": "硅胶磁吸 埃普lp 1s车载手机支架仅49 网易数码",
+        "source": "360搜索公开索引",
+        "sourceType": "search-engine-index",
+        "url": "https://www.163.com/digi/article/D6IFITT7001680NE.html",
+        "domain": "www.163.com",
+        "imageUrl": null,
+        "priceText": null,
+        "currency": null,
+        "moq": null,
+        "supplierName": null,
+        "location": null,
+        "specifications": {},
+        "material": null,
+        "description": null,
+        "searchQuery": "车载手机支架 ABS 硅胶",
+        "matchedSignals": [
+          "产品名称高度相关",
+          "材料相关"
+        ],
+        "conflictingSignals": [],
+        "score": 0.3569,
+        "retrievedAt": "2026-08-10T10:34:31.098Z",
+        "needsHumanReview": true,
+        "sourceEvidence": [
+          {
+            "schemaVersion": "1.0",
+            "evidenceId": "so_b2b30898",
+            "evidenceType": "search-result",
+            "sourceUrl": "https://www.so.com/s?q=%E8%BD%A6%E8%BD%BD%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6%20ABS%20%E7%A1%85%E8%83%B6",
+            "retrievedAt": "2026-08-10T10:34:31.098Z",
+            "title": "硅胶磁吸,埃普LP-1S车载手机支架仅49_网易数码",
+            "snippet": null,
+            "imageUrl": null,
+            "supportsFields": [
+              "title"
+            ]
+          }
+        ]
+      },
+      {
+        "schemaVersion": "1.0",
+        "candidateId": "public_4c12b348",
+        "title": "车载手机导航防滑垫硅胶支架-车载手机导航防滑垫硅胶支架批发、促销价格、产地货源 - 阿里巴巴",
+        "normalizedTitle": "车载手机导航防滑垫硅胶支架 车载手机导航防滑垫硅胶支架批发 促销价格 产地货源 阿里巴巴",
+        "source": "360搜索公开索引",
+        "sourceType": "search-engine-index",
+        "url": "https://www.1688.com/chanpin/-B3B5D4D8CAD6BBFAB5BCBABDB7C0BBACB5E6B9E8BDBAD6A7BCDC.html",
+        "domain": "www.1688.com",
+        "imageUrl": "https://so.360tres.com/dmsmfl/127_127_/t01e7a8b673963964d0.jpg?size=220x220&phash=-5599177967242222522",
+        "priceText": null,
+        "currency": null,
+        "moq": null,
+        "supplierName": null,
+        "location": null,
+        "specifications": {},
+        "material": null,
+        "description": "多功能汽车防滑垫iphone车载车用硅胶手机座GPS导航仪支架置物盒 多功能车载手机支架导航硅胶防滑垫小物件固定贴汽车置物垫 汽车多功能手机导航支架车用仪表台硅胶置物垫车载防滑垫BYS-205 车载防滑垫多功能手机导航支架置物架硅胶仪表盘临时停车号码牌",
+        "searchQuery": "车载手机支架 ABS 硅胶",
+        "matchedSignals": [
+          "产品名称高度相关",
+          "类别相关",
+          "应用场景相关",
+          "材料相关"
+        ],
+        "conflictingSignals": [],
+        "score": 0.2752,
+        "retrievedAt": "2026-08-10T10:34:31.098Z",
+        "needsHumanReview": true,
+        "sourceEvidence": [
+          {
+            "schemaVersion": "1.0",
+            "evidenceId": "so_a6771a5f",
+            "evidenceType": "search-result",
+            "sourceUrl": "https://www.so.com/s?q=%E8%BD%A6%E8%BD%BD%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6%20ABS%20%E7%A1%85%E8%83%B6",
+            "retrievedAt": "2026-08-10T10:34:31.098Z",
+            "title": "车载手机导航防滑垫硅胶支架-车载手机导航防滑垫硅胶支架批发、促销价格、产地货源 - 阿里巴巴",
+            "snippet": "多功能汽车防滑垫iphone车载车用硅胶手机座GPS导航仪支架置物盒 多功能车载手机支架导航硅胶防滑垫小物件固定贴汽车置物垫 汽车多功能手机导航支架车用仪表台硅胶置物垫车载防滑垫BYS-205 车载防滑垫多功能手机导航支架置物架硅胶仪表盘临时停车号码牌",
+            "imageUrl": "https://so.360tres.com/dmsmfl/127_127_/t01e7a8b673963964d0.jpg?size=220x220&phash=-5599177967242222522",
+            "supportsFields": [
+              "title",
+              "description",
+              "imageUrl"
+            ]
+          }
+        ]
+      }
+    ],
+    "diagnostics": {
+      "schemaVersion": "1.0",
+      "providerStatuses": [
+        {
+          "provider": "so-public-index",
+          "status": "AVAILABLE",
+          "message": null
+        }
+      ],
+      "queryCount": 1,
+      "rawResultCount": 7,
+      "normalizedCandidateCount": 7,
+      "rejectedCandidateCount": 0,
+      "deduplicatedCandidateCount": 7,
+      "durationMs": 666
+    },
+    "needsHumanReview": true,
+    "createdAt": "2026-08-10T10:34:31.190Z"
+  }
+}

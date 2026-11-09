@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.jpeg",
+  "expected": {
+    "fileType": "image",
+    "includesAny": [
+      "CV-1200",
+      "CV—1200"
+    ],
+    "minBlocks": 1,
+    "minTables": 0,
+    "minImages": 1
+  }
+}

@@ -1,0 +1,17 @@
+module.exports = Object.freeze({
+  FILES_SELECT: 'real-ai:files:select',
+  FILES_STAGE: 'real-ai:files:stage',
+  FILES_CLEANUP: 'real-ai:files:cleanup',
+  ANALYSIS_START: 'real-ai:analysis:start',
+  ANALYSIS_CANCEL: 'real-ai:analysis:cancel',
+  ANALYSIS_STATUS: 'real-ai:analysis:status',
+  ANALYSIS_CLEANUP: 'real-ai:analysis:cleanup',
+  ANALYSIS_PROGRESS: 'real-ai:analysis:progress',
+  PIPELINE_START: 'real-ai:pipeline:start',
+  PIPELINE_CANCEL: 'real-ai:pipeline:cancel',
+  PIPELINE_STATUS: 'real-ai:pipeline:status',
+  PIPELINE_RETRY: 'real-ai:pipeline:retry',
+  PIPELINE_RESUME: 'real-ai:pipeline:resume',
+  PIPELINE_CATALOG_STATUS: 'real-ai:pipeline:catalog-status',
+  PIPELINE_PROGRESS: 'real-ai:pipeline:progress',
+});

@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.xlsx",
+  "expected": {
+    "errorCode": "FILE_CORRUPTED"
+  }
+}

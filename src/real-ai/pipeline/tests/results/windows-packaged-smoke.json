@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "packaged": true,
+  "passed": false,
+  "executedAt": "2026-08-09T14:28:51.469Z",
+  "cases": {
+    "pipeline": {
+      "status": "completed",
+      "extractedProducts": 2,
+      "matchGroups": 2
+    },
+    "pdf": {
+      "parsed": true,
+      "evidence": true
+    },
+    "xlsx": {
+      "parsed": true,
+      "evidence": true
+    },
+    "ocr": {
+      "parsed": true,
+      "evidence": false,
+      "originalModel": null,
+      "needsHumanReview": null,
+      "candidateModel": null,
+      "level": null
+    },
+    "matching": {
+      "exact": 1,
+      "humanReview": 1,
+      "none": 0
+    },
+    "security": {
+      "rendererPathExcluded": true,
+      "apiKeyExcluded": true
+    },
+    "ocrPipeline": {
+      "status": "failed",
+      "extractedProducts": 0,
+      "matchGroups": 0
+    }
+  },
+  "statusHistory": [
+    "queued",
+    "staging",
+    "parsing",
+    "ocr",
+    "extracting",
+    "matching",
+    "completed",
+    "ocr-only:queued",
+    "ocr-only:staging",
+    "ocr-only:parsing",
+    "ocr-only:ocr",
+    "ocr-only:extracting",
+    "ocr-only:matching",
+    "ocr-only:completed",
+    "ocr-only:failed"
+  ],
+  "catalog": {
+    "importedProducts": 24,
+    "version": 1
+  }
+}

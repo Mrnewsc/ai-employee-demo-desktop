@@ -31,10 +31,13 @@ const navGroups: { title: string; items: { key: PageKey; label: string; icon: ty
   ] },
 ];
 
+const developerModeKey = 'shuyuan-ai-developer-mode';
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   const { activePage, navigate, company, demoMode, demoStep, startDemo, exitDemo, nextDemoStep, previousDemoStep, fillDemo, resetDemo, message, notify } = useApp();
   const [clock, setClock] = useState('');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [developerMode, setDeveloperMode] = useState(() => window.localStorage.getItem(developerModeKey) === 'true');
   const isPreview = window.location.search.includes('preview=');
 
   useEffect(() => {
@@ -50,6 +53,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     }
   }, [demoMode]);
 
+  useEffect(() => {
+    const syncDeveloperMode = () => setDeveloperMode(window.localStorage.getItem(developerModeKey) === 'true');
+    window.addEventListener('developer-mode-change', syncDeveloperMode);
+    return () => window.removeEventListener('developer-mode-change', syncDeveloperMode);
+  }, []);
+
   const sidebarClass = sidebarCollapsed ? 'sidebar collapsed' : 'sidebar';
   const pageTitle = useMemo(() => navGroups.flatMap((group) => group.items).find((item) => item.key === activePage)?.label ?? 'AI工作台', [activePage]);
 
@@ -61,8 +70,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return <div className="app-shell">
     <aside className={sidebarClass}>
       <div className="brand-lockup">
-        <img src={appConfig.logoPath} alt={appConfig.brandName} />
-        {!sidebarCollapsed && <div className="brand-product">AI员工一体机</div>}
+        <span className="brand-mark"><img src={appConfig.logoPath} alt="" /></span>
+        {!sidebarCollapsed && <div className="brand-copy">
+          <strong>数员科技</strong>
+          <span>SHUYUAN TECH</span>
+          <small>AI数字员工</small>
+        </div>}
       </div>
       <div className="nav-scroll">
         {navGroups.map((group) => <div key={group.title}>
@@ -75,9 +88,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <button className={`nav-item ${activePage === 'settings' ? 'active' : ''}`} onClick={() => navigate('settings')} title="系统设置"><Settings /><span>系统设置</span></button>
       </div>
       <div className="sidebar-actions">
-        <button className="side-action" onClick={startDemo} title="进入演示模式"><Play /><span>进入演示模式</span></button>
-        <button className="side-action" onClick={fillDemo} title="一键填充数据"><Gauge /><span>一键填充数据</span></button>
-        <button className="side-action" onClick={resetDemo} title="重置演示数据"><RotateCcw /><span>重置演示数据</span></button>
+        {developerMode && <>
+          <button className="side-action" onClick={startDemo} title="进入演示模式"><Play /><span>进入演示模式</span></button>
+          <button className="side-action" onClick={fillDemo} title="一键填充数据"><Gauge /><span>一键填充数据</span></button>
+          <button className="side-action" onClick={resetDemo} title="重置演示数据"><RotateCcw /><span>重置演示数据</span></button>
+        </>}
         <button className="side-action" onClick={() => setSidebarCollapsed((v) => !v)} title={sidebarCollapsed ? '展开导航' : '收起导航'}><PanelLeftClose /><span>{sidebarCollapsed ? '展开导航' : '收起导航'}</span></button>
       </div>
     </aside>
@@ -92,7 +107,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <div className="runtime"><span className="pulse-dot" />AI员工运行中</div>
         </div>
         <div className="topbar-right">
-          <span className="demo-badge"><Bot size={13} />演示模式</span>
+          {developerMode && demoMode && <span className="demo-badge"><Bot size={13} />演示模式</span>}
           <span className="clock">{clock}</span>
           <button className="top-icon" title="全屏演示" onClick={() => document.documentElement.requestFullscreen?.().catch(() => undefined)}><Maximize2 size={16} /></button>
           <button className="top-icon" title="系统帮助" onClick={() => notify(`当前页面：${pageTitle}`)}><CircleHelp size={16} /></button>
@@ -101,7 +116,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <main className="page-content"><div className="page-inner"><AnimatePresence mode="wait"><motion.div key={activePage} initial={isPreview ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={isPreview ? undefined : { opacity: 0, y: -5 }} transition={{ duration: .24 }}>{children}</motion.div></AnimatePresence></div></main>
     </div>
 
-    {demoMode && <div className="demo-controls">
+    {developerMode && demoMode && activePage !== 'dashboard' && <div className="demo-controls">
       <button className="btn btn-quiet" onClick={previousDemoStep} disabled={demoStep === 0}><ChevronLeft size={15} />上一步</button>
       <div className="demo-progress">客户演示 · {demoStep + 1} / 10</div>
       <button className="btn btn-primary" onClick={demoStep === 9 ? handleExitDemo : nextDemoStep}>{demoStep === 9 ? '结束演示' : '下一步'}{demoStep !== 9 && <ChevronRight size={15} />}</button>

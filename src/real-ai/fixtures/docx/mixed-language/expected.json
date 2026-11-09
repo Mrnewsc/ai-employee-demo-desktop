@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.docx",
+  "expected": {
+    "fileType": "docx",
+    "includes": [
+      "LINE-A200",
+      "金属配件"
+    ],
+    "minBlocks": 3,
+    "minTables": 1,
+    "minImages": 0
+  }
+}

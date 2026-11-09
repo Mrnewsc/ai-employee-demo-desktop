@@ -1,0 +1,485 @@
+{
+  "reportVersion": "REAL-AI-001E-V1",
+  "generatedAt": "2026-08-09T12:52:43.578Z",
+  "catalogVersion": 1,
+  "catalogProductCount": 24,
+  "caseCount": 34,
+  "passedCount": 34,
+  "failedCount": 0,
+  "top1Accuracy": 1,
+  "top3Recall": 1,
+  "exactPrecision": 1,
+  "wrongMatchCount": 0,
+  "noneCorrectCount": 3,
+  "hardConflictBlockedCount": 2,
+  "humanReviewRecall": 1,
+  "p0": {
+    "wrongExactMatchCount": 0,
+    "hardConflictPromotedToExact": 0,
+    "ocrAmbiguousPromotedToExact": 0,
+    "noneForcedToCandidate": 0,
+    "unknownProductFabricated": 0,
+    "silentConflictOverwrite": 0,
+    "passed": true
+  },
+  "performance": {
+    "averageTotalMs": 13.03,
+    "p95TotalMs": 19,
+    "averageCandidateRetrievalMs": 8.26,
+    "averageRuleMatchingMs": 0.12,
+    "semanticCallCount": 0
+  },
+  "cases": [
+    {
+      "id": "exact-sp3000",
+      "description": "型号与名称精确匹配",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000",
+        "JG-SP-3200"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 33
+    },
+    {
+      "id": "model-format-dash",
+      "description": "型号无连字符可归一",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 19
+    },
+    {
+      "id": "model-format-space",
+      "description": "型号空格差异可归一",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 16
+    },
+    {
+      "id": "model-format-fullwidth",
+      "description": "全角型号可归一",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "exact-conveyor",
+      "description": "输送模块型号精确匹配",
+      "expectedProductId": "YW-CV-1200",
+      "top1ProductId": "YW-CV-1200",
+      "top3ProductIds": [
+        "YW-CV-1200"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "exact-line",
+      "description": "自动化生产线型号精确匹配",
+      "expectedProductId": "YW-AL-2600",
+      "top1ProductId": "YW-AL-2600",
+      "top3ProductIds": [
+        "YW-AL-2600"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "exact-enhanced",
+      "description": "同系列不同型号精确区分",
+      "expectedProductId": "JG-SP-3200",
+      "top1ProductId": "JG-SP-3200",
+      "top3ProductIds": [
+        "JG-SP-3200"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "exact-furniture",
+      "description": "家具喷涂型号精确匹配",
+      "expectedProductId": "FS-FP-980",
+      "top1ProductId": "FS-FP-980",
+      "top3ProductIds": [
+        "FS-FP-980"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "synonym-spray",
+      "description": "自动喷涂机同义词召回",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 10
+    },
+    {
+      "id": "synonym-powder",
+      "description": "喷粉设备同义词召回",
+      "expectedProductId": "JG-SP-3000P",
+      "top1ProductId": "JG-SP-3000P",
+      "top3ProductIds": [
+        "JG-SP-3000P",
+        "PC-2400"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 10
+    },
+    {
+      "id": "synonym-line",
+      "description": "自动产线同义词召回",
+      "expectedProductId": "YW-AL-2600",
+      "top1ProductId": "YW-AL-2600",
+      "top3ProductIds": [
+        "YW-AL-2600"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 9
+    },
+    {
+      "id": "synonym-conveyor",
+      "description": "输送机同义词召回",
+      "expectedProductId": "YW-CV-1200",
+      "top1ProductId": "YW-CV-1200",
+      "top3ProductIds": [
+        "YW-CV-1200"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 9
+    },
+    {
+      "id": "synonym-furniture",
+      "description": "家具喷漆线同义词召回",
+      "expectedProductId": "FS-FP-980",
+      "top1ProductId": "FS-FP-980",
+      "top3ProductIds": [
+        "FS-FP-980",
+        "FS-FP-980UV",
+        "JG-SP-3000UV"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 11
+    },
+    {
+      "id": "synonym-reciprocating",
+      "description": "往复式喷涂机同义词召回",
+      "expectedProductId": "FS-WD-1200",
+      "top1ProductId": "FS-WD-1200",
+      "top3ProductIds": [
+        "FS-WD-1200"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 8
+    },
+    {
+      "id": "keyword-pretreatment",
+      "description": "前处理关键词和别名召回",
+      "expectedProductId": "PRE-1200",
+      "top1ProductId": "PRE-1200",
+      "top3ProductIds": [
+        "PRE-1200"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 10
+    },
+    {
+      "id": "keyword-powder-line",
+      "description": "喷粉生产线同义词召回",
+      "expectedProductId": "PC-2400",
+      "top1ProductId": "PC-2400",
+      "top3ProductIds": [
+        "PC-2400"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 9
+    },
+    {
+      "id": "unit-meter",
+      "description": "工作宽度m与mm换算",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000",
+        "JG-SP-3200",
+        "JG-SP-2800"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 11
+    },
+    {
+      "id": "unit-centimeter",
+      "description": "工作宽度cm与mm换算",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000",
+        "JG-SP-3200",
+        "JG-SP-2800"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 10
+    },
+    {
+      "id": "unit-watt",
+      "description": "功率W与kW换算",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000",
+        "JG-SP-3200",
+        "JG-SP-2800"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 9
+    },
+    {
+      "id": "hard-width-conflict",
+      "description": "型号一致但工作宽度硬冲突",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "medium",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "hard-power-conflict",
+      "description": "型号一致但功率硬冲突",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "medium",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 14
+    },
+    {
+      "id": "soft-material-conflict",
+      "description": "软规格冲突不等同硬冲突",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "ocr-ambiguous-model",
+      "description": "OCR 9P不得修正为SP",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "low",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 14
+    },
+    {
+      "id": "unknown-model-none",
+      "description": "未知型号且无名称时返回none",
+      "expectedProductId": null,
+      "top1ProductId": null,
+      "top3ProductIds": [],
+      "level": "none",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 12
+    },
+    {
+      "id": "unrelated-none",
+      "description": "完全无关产品返回none",
+      "expectedProductId": null,
+      "top1ProductId": null,
+      "top3ProductIds": [],
+      "level": "none",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 9
+    },
+    {
+      "id": "multiple-close",
+      "description": "名称宽泛导致多候选接近",
+      "expectedProductId": "JG-SP-2800",
+      "top1ProductId": "JG-SP-2800",
+      "top3ProductIds": [
+        "JG-SP-2800",
+        "JG-SP-3000",
+        "JG-SP-3200"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 9
+    },
+    {
+      "id": "missing-product-name",
+      "description": "缺产品名称但型号命中仍需人工确认",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 14
+    },
+    {
+      "id": "source-conflict",
+      "description": "ExtractedProduct自身冲突必须人工确认",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 16
+    },
+    {
+      "id": "cross-file-merged",
+      "description": "跨文件合并产品保留客户Evidence",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000",
+        "JG-SP-3200"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 15
+    },
+    {
+      "id": "application-only",
+      "description": "仅应用场景不能形成高等级",
+      "expectedProductId": "RB-600",
+      "top1ProductId": "RB-600",
+      "top3ProductIds": [
+        "RB-600"
+      ],
+      "level": "low",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 9
+    },
+    {
+      "id": "keyword-robot",
+      "description": "关键词别名召回机器人单元",
+      "expectedProductId": "RB-600",
+      "top1ProductId": "RB-600",
+      "top3ProductIds": [
+        "RB-600"
+      ],
+      "level": "high",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 8
+    },
+    {
+      "id": "inactive-product",
+      "description": "停用产品不得成为候选",
+      "expectedProductId": null,
+      "top1ProductId": null,
+      "top3ProductIds": [],
+      "level": "none",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 14
+    },
+    {
+      "id": "missing-hard-catalog-spec",
+      "description": "候选缺关键规格必须人工确认",
+      "expectedProductId": "JG-SP-3000",
+      "top1ProductId": "JG-SP-3000",
+      "top3ProductIds": [
+        "JG-SP-3000"
+      ],
+      "level": "medium",
+      "needsHumanReview": true,
+      "passed": true,
+      "durationMs": 14
+    },
+    {
+      "id": "same-name-different-model",
+      "description": "同名系列通过型号稳定区分",
+      "expectedProductId": "JG-SP-2800",
+      "top1ProductId": "JG-SP-2800",
+      "top3ProductIds": [
+        "JG-SP-2800",
+        "JG-SP-3000",
+        "JG-SP-3200"
+      ],
+      "level": "exact",
+      "needsHumanReview": false,
+      "passed": true,
+      "durationMs": 16
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.docx",
+  "expected": {
+    "fileType": "docx",
+    "includes": [
+      "自动喷涂设备",
+      "SP-3000"
+    ],
+    "minBlocks": 4,
+    "minTables": 1,
+    "minImages": 0
+  }
+}

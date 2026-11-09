@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.jpg",
+  "expected": {
+    "fileType": "image",
+    "includesAny": [
+      "M0DEL",
+      "SOI5",
+      "5.5"
+    ],
+    "minBlocks": 1,
+    "minTables": 0,
+    "minImages": 1,
+    "warningAny": [
+      "ocr_low_confidence",
+      "ocr_character_ambiguity"
+    ]
+  }
+}

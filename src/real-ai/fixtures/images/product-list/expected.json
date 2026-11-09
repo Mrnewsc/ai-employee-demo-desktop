@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.png",
+  "expected": {
+    "fileType": "image",
+    "includesAny": [
+      "SP-3000",
+      "SP—3000",
+      "3000"
+    ],
+    "minBlocks": 1,
+    "minTables": 0,
+    "minImages": 1
+  }
+}

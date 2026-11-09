@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.pdf",
+  "expected": {
+    "errorCode": "FILE_CORRUPTED"
+  }
+}

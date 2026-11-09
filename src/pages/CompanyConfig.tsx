@@ -1,8 +1,10 @@
-import { Save, Check, Building2 } from 'lucide-react';
+import { useState } from 'react';
+import { Save, Check, Building2, Package } from 'lucide-react';
 import { companyTemplates } from '../demo/demoData';
 import { useApp } from '../stores/AppStore';
 import { DemoNote, PageHeader, Surface } from '../components/UI';
 import type { CompanyProfile } from '../types';
+import { CatalogManagementPanel } from '../catalog-management/CatalogManagementPanel';
 
 const fields: { key: keyof CompanyProfile; label: string; type?: string; full?: boolean }[] = [
   { key: 'companyName', label: '企业名称' },
@@ -21,8 +23,15 @@ const fields: { key: keyof CompanyProfile; label: string; type?: string; full?: 
 
 export function CompanyConfig() {
   const { company, updateCompany, notify } = useApp();
+  const preview = new URLSearchParams(window.location.search).get('preview');
+  const [section, setSection] = useState<'profile' | 'catalog'>(preview === 'product-catalog' ? 'catalog' : 'profile');
   return <>
-    <PageHeader eyebrow="COMPANY PROFILE" title="企业配置" description="让AI先理解企业，再围绕真实产品与客户开展演示。" actions={<DemoNote />} />
+    <PageHeader eyebrow={section === 'catalog' ? 'PRODUCT CATALOG' : 'COMPANY PROFILE'} title={section === 'catalog' ? '企业产品库' : '企业配置'} description={section === 'catalog' ? '管理企业真实产品资料，为AI产品匹配提供统一、可追溯的数据基础。' : '让AI先理解企业，再围绕真实产品与客户开展演示。'} actions={section === 'profile' ? <DemoNote /> : undefined} />
+    <div className="company-config-tabs" role="tablist">
+      <button role="tab" aria-selected={section === 'profile'} className={section === 'profile' ? 'active' : ''} onClick={() => setSection('profile')}><Building2 />企业基础信息</button>
+      <button role="tab" aria-selected={section === 'catalog'} className={section === 'catalog' ? 'active' : ''} onClick={() => setSection('catalog')}><Package />企业产品库</button>
+    </div>
+    {section === 'catalog' ? <CatalogManagementPanel /> : <>
     <Surface title="选择演示模板" kicker="点击模板自动填充，可继续修改">
       <div className="template-row">{Object.entries(companyTemplates).map(([name, template]) => <button key={name} className={`template ${company.companyName === template.companyName ? 'active' : ''}`} onClick={() => updateCompany(template)}><Building2 size={13} style={{ verticalAlign: 'middle', marginRight: 5 }} />{name}</button>)}</div>
       <div className="form-grid">
@@ -37,6 +46,6 @@ export function CompanyConfig() {
       </div>
     </Surface>
     <div className="surface-subtle" style={{ marginTop: 18, padding: 16, display: 'flex', alignItems: 'center', gap: 9, color: '#95a8c5', fontSize: 12 }}><Check size={15} color="#6ed9b3" />企业专属知识库已准备，当前信息仅保存在本地演示环境。</div>
+    </>}
   </>;
 }
-

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.xls",
+  "expected": {
+    "fileType": "xls",
+    "includes": [
+      "CTRL-A1"
+    ],
+    "minBlocks": 0,
+    "minTables": 1,
+    "minImages": 0,
+    "sheetNames": [
+      "Legacy"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.xlsx",
+  "expected": {
+    "fileType": "xlsx",
+    "includes": [
+      "SP-3000",
+      "CV-1200"
+    ],
+    "minBlocks": 0,
+    "minTables": 1,
+    "minImages": 0,
+    "sheetNames": [
+      "产品清单"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.docx",
+  "expected": {
+    "fileType": "docx",
+    "includes": [
+      "产品图片附件"
+    ],
+    "minBlocks": 2,
+    "minTables": 0,
+    "minImages": 1
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "executedAt": "2026-08-10T09:56:49.866Z",
+  "executable": "release/win-unpacked/数员科技 AI数字员工.exe",
+  "userDataIsolated": true,
+  "phases": [
+    {
+      "phase": "initial-import",
+      "passed": true,
+      "catalogVersion": 1,
+      "templateSaved": true,
+      "search": "SP-3000",
+      "detailOpened": true,
+      "rendererErrorCount": 0
+    },
+    {
+      "phase": "invalid-import",
+      "passed": true,
+      "currentVersionUnchanged": 1,
+      "invalidCommitBlocked": true,
+      "rendererErrorCount": 0
+    },
+    {
+      "phase": "v2-and-rollback",
+      "passed": true,
+      "importedVersion": 2,
+      "rollbackCreatedVersion": 3,
+      "restoredFromVersion": 1,
+      "rendererErrorCount": 0
+    },
+    {
+      "phase": "restart-persistence",
+      "passed": true,
+      "catalogVersion": 3,
+      "productVisible": true,
+      "productCountVisible": true,
+      "rendererErrorCount": 0
+    }
+  ],
+  "evidence": [
+    "preview/product-catalog-ui/01-empty-1366x768.png",
+    "preview/product-catalog-ui/11-brand-header-2x.png",
+    "preview/product-catalog-ui/03-import-preview-collapsed-1366x768.png",
+    "preview/product-catalog-ui/04-import-preview-expanded-1366x768.png",
+    "preview/product-catalog-ui/05-import-success-1366x768.png",
+    "preview/product-catalog-ui/02-product-list-1366x768.png",
+    "preview/product-catalog-ui/07-product-detail-1366x768.png",
+    "preview/product-catalog-ui/06-error-rows-1366x768.png",
+    "preview/product-catalog-ui/08-version-history-1366x768.png",
+    "preview/product-catalog-ui/09-rollback-confirm-1366x768.png",
+    "preview/product-catalog-ui/10-product-list-1440x900.png"
+  ],
+  "template": {
+    "saved": true,
+    "fileName": "packaged-downloaded-template.xlsx",
+    "standardXlsx": true
+  },
+  "packagedMatch": {
+    "schemaVersion": "1.0",
+    "packaged": true,
+    "catalogVersion": 3,
+    "candidateProductId": "JG-SP-3000",
+    "candidateModel": "SP-3000",
+    "level": "high",
+    "needsHumanReview": true
+  },
+  "passed": true
+}

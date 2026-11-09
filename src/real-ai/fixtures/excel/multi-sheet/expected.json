@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "input": "input.xlsx",
+  "expected": {
+    "fileType": "xlsx",
+    "includes": [
+      "LINE-A200",
+      "五金配件"
+    ],
+    "minBlocks": 0,
+    "minTables": 3,
+    "minImages": 0,
+    "sheetNames": [
+      "设备需求",
+      "工艺参数",
+      "客户备注"
+    ]
+  }
+}

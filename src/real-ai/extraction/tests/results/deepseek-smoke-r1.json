@@ -1,0 +1,5257 @@
+{
+  "schemaVersion": "1.0",
+  "reportVersion": "REAL-AI-001C-R1",
+  "executedAt": "2026-08-09T04:54:49.288Z",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "containsSensitiveCustomerData": false,
+  "summary": {
+    "basic": {
+      "sampleCount": 9,
+      "requestCount": 13,
+      "successCount": 9,
+      "failureCount": 0,
+      "productCount": 12,
+      "schemaFirstPassCount": 13,
+      "schemaFirstPassRate": 1,
+      "repairCount": 0,
+      "apiErrorCount": 0
+    },
+    "fieldQuality": {
+      "productName": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1
+      },
+      "model": {
+        "total": 13,
+        "correct": 12,
+        "accuracy": 0.9230769230769231
+      },
+      "quantity": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1
+      },
+      "specifications": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1
+      },
+      "material": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1
+      },
+      "process": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1
+      },
+      "application": {
+        "total": 12,
+        "correct": 11,
+        "accuracy": 0.9166666666666666
+      },
+      "missingFields": {
+        "total": 34,
+        "correctlyEmpty": 33
+      },
+      "hallucinatedFieldCount": 0
+    },
+    "evidence": {
+      "total": 74,
+      "valid": 74,
+      "invalid": 0,
+      "accuracy": 1,
+      "criticalFieldsWithoutEvidence": 0
+    },
+    "humanReview": {
+      "expectedProducts": 3,
+      "triggeredProducts": 1,
+      "reasonDistribution": {
+        "model存在多来源冲突": 1,
+        "quantity存在多来源冲突": 1
+      }
+    },
+    "merge": {
+      "correctMergeCount": 2,
+      "duplicateProductCount": 0,
+      "wrongMergeCount": 1,
+      "silentlyOverwrittenConflictCount": 0
+    },
+    "performance": {
+      "averageRequestDurationMs": 17335,
+      "p95RequestDurationMs": null,
+      "slowestRequest": {
+        "schemaVersion": "1.0",
+        "requestId": "ds_mslbuwcp_8",
+        "sampleId": "ocr-nameplate-regression",
+        "chunkId": "1f015b4a7d25aff5:chunk:1",
+        "startedAt": "2026-08-09T04:53:42.601Z",
+        "durationMs": 50325,
+        "inputChars": 1623,
+        "inputTokens": 842,
+        "outputTokens": 6408,
+        "totalTokens": 7250,
+        "schemaValid": true,
+        "repairAttempt": 0,
+        "productCount": 1,
+        "errorCode": null
+      },
+      "samples": [
+        {
+          "sampleId": "pdf-native",
+          "durationMs": 18581,
+          "chunkCount": 1,
+          "totalTokens": 2837
+        },
+        {
+          "sampleId": "pdf-multi-product",
+          "durationMs": 22988,
+          "chunkCount": 2,
+          "totalTokens": 7588
+        },
+        {
+          "sampleId": "excel-products",
+          "durationMs": 20202,
+          "chunkCount": 1,
+          "totalTokens": 3955
+        },
+        {
+          "sampleId": "docx-request",
+          "durationMs": 36744,
+          "chunkCount": 2,
+          "totalTokens": 7959
+        },
+        {
+          "sampleId": "ocr-low-confidence-model",
+          "durationMs": 22582,
+          "chunkCount": 1,
+          "totalTokens": 3603
+        },
+        {
+          "sampleId": "ocr-nameplate-regression",
+          "durationMs": 50325,
+          "chunkCount": 1,
+          "totalTokens": 7250
+        },
+        {
+          "sampleId": "missing-fields",
+          "durationMs": 6191,
+          "chunkCount": 1,
+          "totalTokens": 1406
+        },
+        {
+          "sampleId": "conflicting-fields",
+          "durationMs": 5531,
+          "chunkCount": 2,
+          "totalTokens": 2728
+        },
+        {
+          "sampleId": "cross-file-merge",
+          "durationMs": 4600,
+          "chunkCount": 2,
+          "totalTokens": 2549
+        }
+      ]
+    },
+    "p0Checks": {
+      "allSamplesCompletedOrExplained": true,
+      "schemaValid": true,
+      "modelFidelity": false,
+      "missingFieldsRemainEmpty": false,
+      "noHallucinations": true,
+      "allCriticalFieldsHaveEvidence": true,
+      "evidenceTraceable": true,
+      "ocrHumanReview": false,
+      "conflictsPreserved": true,
+      "crossFileEvidencePreserved": true,
+      "noWrongMerges": false,
+      "ocrDuplicateResolved": true
+    },
+    "p0Passed": false
+  },
+  "ocrBeforeAfter": {
+    "comparableSample": "images/nameplate/input.jpg",
+    "before": {
+      "chunkCount": 2,
+      "inputChars": 215,
+      "totalTokens": 10722,
+      "durationMs": 59416
+    },
+    "after": {
+      "chunkCount": 1,
+      "inputChars": 105,
+      "totalTokens": 7250,
+      "durationMs": 50325
+    }
+  },
+  "requests": [
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbs9mg_1",
+      "sampleId": "pdf-native",
+      "chunkId": "552cd24b8a4f2189:chunk:1",
+      "startedAt": "2026-08-09T04:51:39.832Z",
+      "durationMs": 18579,
+      "inputChars": 1388,
+      "inputTokens": 710,
+      "outputTokens": 2127,
+      "totalTokens": 2837,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbsnzy_3",
+      "sampleId": "pdf-multi-product",
+      "chunkId": "faa8f549da4724c6:chunk:2",
+      "startedAt": "2026-08-09T04:51:58.462Z",
+      "durationMs": 17318,
+      "inputChars": 2020,
+      "inputTokens": 1076,
+      "outputTokens": 2610,
+      "totalTokens": 3686,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 3,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbsnzy_2",
+      "sampleId": "pdf-multi-product",
+      "chunkId": "faa8f549da4724c6:chunk:1",
+      "startedAt": "2026-08-09T04:51:58.462Z",
+      "durationMs": 22986,
+      "inputChars": 1350,
+      "inputTokens": 697,
+      "outputTokens": 3205,
+      "totalTokens": 3902,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 3,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbt5r8_4",
+      "sampleId": "excel-products",
+      "chunkId": "08f5c702298639fc:chunk:1",
+      "startedAt": "2026-08-09T04:52:21.476Z",
+      "durationMs": 20201,
+      "inputChars": 2268,
+      "inputTokens": 1182,
+      "outputTokens": 2773,
+      "totalTokens": 3955,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 2,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbtlef_6",
+      "sampleId": "docx-request",
+      "chunkId": "1708af4155a99e0d:chunk:2",
+      "startedAt": "2026-08-09T04:52:41.751Z",
+      "durationMs": 13449,
+      "inputChars": 2080,
+      "inputTokens": 1068,
+      "outputTokens": 2188,
+      "totalTokens": 3256,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 2,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbtlef_5",
+      "sampleId": "docx-request",
+      "chunkId": "1708af4155a99e0d:chunk:1",
+      "startedAt": "2026-08-09T04:52:41.751Z",
+      "durationMs": 36744,
+      "inputChars": 1357,
+      "inputTokens": 683,
+      "outputTokens": 4020,
+      "totalTokens": 4703,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbueci_7",
+      "sampleId": "ocr-low-confidence-model",
+      "chunkId": "5baa41dd52e2b325:chunk:1",
+      "startedAt": "2026-08-09T04:53:19.266Z",
+      "durationMs": 22580,
+      "inputChars": 1600,
+      "inputTokens": 844,
+      "outputTokens": 2759,
+      "totalTokens": 3603,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbuwcp_8",
+      "sampleId": "ocr-nameplate-regression",
+      "chunkId": "1f015b4a7d25aff5:chunk:1",
+      "startedAt": "2026-08-09T04:53:42.601Z",
+      "durationMs": 50325,
+      "inputChars": 1623,
+      "inputTokens": 842,
+      "outputTokens": 6408,
+      "totalTokens": 7250,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbvz70_9",
+      "sampleId": "missing-fields",
+      "chunkId": "f034bec5a0b84359:chunk:1",
+      "startedAt": "2026-08-09T04:54:32.940Z",
+      "durationMs": 6190,
+      "inputChars": 1297,
+      "inputTokens": 667,
+      "outputTokens": 739,
+      "totalTokens": 1406,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbw3zb_11",
+      "sampleId": "conflicting-fields",
+      "chunkId": "ec624e58e52ab965:chunk:1",
+      "startedAt": "2026-08-09T04:54:39.143Z",
+      "durationMs": 3920,
+      "inputChars": 1422,
+      "inputTokens": 740,
+      "outputTokens": 509,
+      "totalTokens": 1249,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbw3zb_10",
+      "sampleId": "conflicting-fields",
+      "chunkId": "29b0b55f77c59dbc:chunk:1",
+      "startedAt": "2026-08-09T04:54:39.143Z",
+      "durationMs": 5530,
+      "inputChars": 1422,
+      "inputTokens": 754,
+      "outputTokens": 725,
+      "totalTokens": 1479,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbw899_13",
+      "sampleId": "cross-file-merge",
+      "chunkId": "2492fa5f5abf5f05:chunk:1",
+      "startedAt": "2026-08-09T04:54:44.685Z",
+      "durationMs": 2937,
+      "inputChars": 1436,
+      "inputTokens": 764,
+      "outputTokens": 374,
+      "totalTokens": 1138,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    },
+    {
+      "schemaVersion": "1.0",
+      "requestId": "ds_mslbw899_12",
+      "sampleId": "cross-file-merge",
+      "chunkId": "552cd24b8a4f2189:chunk:1",
+      "startedAt": "2026-08-09T04:54:44.685Z",
+      "durationMs": 4599,
+      "inputChars": 1394,
+      "inputTokens": 712,
+      "outputTokens": 699,
+      "totalTokens": 1411,
+      "schemaValid": true,
+      "repairAttempt": 0,
+      "productCount": 1,
+      "errorCode": null
+    }
+  ],
+  "cases": [
+    {
+      "sampleId": "pdf-native",
+      "sampleType": "原生PDF单产品",
+      "sourceFiles": [
+        "input.pdf"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": {
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": "metal parts coating",
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        }
+      ],
+      "requestCount": 1,
+      "chunkCount": 1,
+      "inputChars": 83,
+      "inputTokens": 710,
+      "outputTokens": 2127,
+      "totalTokens": 2837,
+      "durationMs": 18581,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 88,
+        "blocksTextLength": 83,
+        "tablesTextLength": 0,
+        "imageOcrTextLength": 0,
+        "rawTextSentDirectly": false,
+        "chunkCount": 1,
+        "chunks": [
+          {
+            "chunkId": "552cd24b8a4f2189:chunk:1",
+            "evidenceChars": 83,
+            "promptTemplateChars": 811,
+            "userPromptChars": 531,
+            "messagesChars": 1342,
+            "sourceKinds": [
+              "text"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbs9mg_1",
+          "sampleId": "pdf-native",
+          "chunkId": "552cd24b8a4f2189:chunk:1",
+          "startedAt": "2026-08-09T04:51:39.832Z",
+          "durationMs": 18579,
+          "inputChars": 1388,
+          "inputTokens": 710,
+          "outputTokens": 2127,
+          "totalTokens": 2837,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_bf666ce2",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": "metal parts coating",
+          "notes": [
+            "需要接入现有生产线。"
+          ],
+          "confidence": 0.86,
+          "fieldConfidence": {
+            "productName": 0.86,
+            "model": 0.86,
+            "quantity": 0.86,
+            "material": 0,
+            "process": 0,
+            "application": 0.86
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "产品名称：自动喷涂设备",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  734.515,
+                  188,
+                  746.515
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-2",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "model",
+              "text": "型号：SP-3000",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  720.8275,
+                  134,
+                  732.8275
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-3",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "quantity",
+              "text": "数量：1套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  707.14,
+                  110,
+                  719.14
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-4",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "application",
+              "text": "Application: metal parts coating",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  693.4525,
+                  248,
+                  705.4525
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-5",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "notes",
+              "text": "备注：需要接入现有生产线。",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  679.765,
+                  212,
+                  691.765
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-6",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "自动喷涂设备",
+            "model": "SP-3000",
+            "specifications": {},
+            "quantity": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "material": null,
+            "process": null,
+            "application": "metal parts coating",
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          }
+        ],
+        "expectedProductCount": 1,
+        "actualProductCount": 1,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "productName",
+            "expected": "自动喷涂设备",
+            "actual": "自动喷涂设备",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "actual": "SP-3000",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "quantity",
+            "expected": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "actual": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "specifications",
+            "expected": {},
+            "actual": {},
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "material",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "application",
+            "expected": "metal parts coating",
+            "actual": "metal parts coating",
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_bf666ce2",
+            "field": "productName",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-2",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "model",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "quantity",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "application",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "notes",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-6",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 5,
+        "evidenceValid": 5,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 3,
+        "missingExpectedFieldCorrect": 3,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 1,
+        "actualSourceFileCount": 1,
+        "correctMergeCount": 0,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 0,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [],
+        "actualWarningCodes": [],
+        "missingExpectedWarningCodes": []
+      }
+    },
+    {
+      "sampleId": "pdf-multi-product",
+      "sampleType": "多产品PDF",
+      "sourceFiles": [
+        "input.pdf"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "喷涂主机",
+          "model": "SP-3000",
+          "specifications": {
+            "规格": "18.5kW"
+          },
+          "quantity": {
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        },
+        {
+          "productName": "输送模块",
+          "model": "CV-1200",
+          "specifications": {
+            "规格": "1200mm"
+          },
+          "quantity": {
+            "value": 2,
+            "unit": "套",
+            "raw": "2套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        },
+        {
+          "productName": "控制系统",
+          "model": "CTRL-A1",
+          "specifications": {
+            "规格": "PLC"
+          },
+          "quantity": {
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        }
+      ],
+      "requestCount": 2,
+      "chunkCount": 2,
+      "inputChars": 153,
+      "inputTokens": 1773,
+      "outputTokens": 5815,
+      "totalTokens": 7588,
+      "durationMs": 22988,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 93,
+        "blocksTextLength": 89,
+        "tablesTextLength": 64,
+        "imageOcrTextLength": 0,
+        "rawTextSentDirectly": false,
+        "chunkCount": 2,
+        "chunks": [
+          {
+            "chunkId": "faa8f549da4724c6:chunk:1",
+            "evidenceChars": 89,
+            "promptTemplateChars": 811,
+            "userPromptChars": 493,
+            "messagesChars": 1304,
+            "sourceKinds": [
+              "text"
+            ]
+          },
+          {
+            "chunkId": "faa8f549da4724c6:chunk:2",
+            "evidenceChars": 64,
+            "promptTemplateChars": 811,
+            "userPromptChars": 1163,
+            "messagesChars": 1974,
+            "sourceKinds": [
+              "table-cell"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbsnzy_3",
+          "sampleId": "pdf-multi-product",
+          "chunkId": "faa8f549da4724c6:chunk:2",
+          "startedAt": "2026-08-09T04:51:58.462Z",
+          "durationMs": 17318,
+          "inputChars": 2020,
+          "inputTokens": 1076,
+          "outputTokens": 2610,
+          "totalTokens": 3686,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 3,
+          "errorCode": null
+        },
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbsnzy_2",
+          "sampleId": "pdf-multi-product",
+          "chunkId": "faa8f549da4724c6:chunk:1",
+          "startedAt": "2026-08-09T04:51:58.462Z",
+          "durationMs": 22986,
+          "inputChars": 1350,
+          "inputTokens": 697,
+          "outputTokens": 3205,
+          "totalTokens": 3902,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 3,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_b1818b99",
+          "productName": "喷涂主机",
+          "model": "SP-3000",
+          "specifications": {
+            "规格": "18.5kW"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "notes": [],
+          "confidence": 0.88,
+          "fieldConfidence": {
+            "productName": 0.88,
+            "model": 0.88,
+            "quantity": 0.88,
+            "material": 0,
+            "process": 0,
+            "application": 0,
+            "specifications.规格": 0.88
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "喷涂主机",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  650.5775,
+                  483,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  650.5775,
+                  483,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "18.5kW",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  650.5775,
+                  483,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "quantity",
+              "text": "1套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  650.5775,
+                  483,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "productName",
+              "text": "喷涂主机",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  650.5775,
+                  108,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:4",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  210,
+                  650.5775,
+                  252,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:5",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "18.5kW",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  350,
+                  650.5775,
+                  386,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:6",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "1套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  465,
+                  650.5775,
+                  483,
+                  662.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:7",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            }
+          ]
+        },
+        {
+          "id": "ext_9ff17b1e",
+          "productName": "输送模块",
+          "model": "CV-1200",
+          "specifications": {
+            "规格": "1200mm"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 2,
+            "unit": "套",
+            "raw": "2套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "notes": [],
+          "confidence": 0.88,
+          "fieldConfidence": {
+            "productName": 0.88,
+            "model": 0.88,
+            "quantity": 0.88,
+            "material": 0,
+            "process": 0,
+            "application": 0,
+            "specifications.规格": 0.88
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "输送模块",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  614.5775,
+                  483,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "model",
+              "text": "CV-1200",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  614.5775,
+                  483,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "1200mm",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  614.5775,
+                  483,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "quantity",
+              "text": "2套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  614.5775,
+                  483,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "productName",
+              "text": "输送模块",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  614.5775,
+                  108,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:8",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "CV-1200",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  210,
+                  614.5775,
+                  252,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:9",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "1200mm",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  350,
+                  614.5775,
+                  386,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:10",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "2套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  465,
+                  614.5775,
+                  483,
+                  626.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:11",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            }
+          ]
+        },
+        {
+          "id": "ext_75ef2699",
+          "productName": "控制系统",
+          "model": "CTRL-A1",
+          "specifications": {
+            "规格": "PLC"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "notes": [],
+          "confidence": 0.88,
+          "fieldConfidence": {
+            "productName": 0.88,
+            "model": 0.88,
+            "quantity": 0.88,
+            "material": 0,
+            "process": 0,
+            "application": 0,
+            "specifications.规格": 0.88
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "控制系统",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  578.5775,
+                  483,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "model",
+              "text": "CTRL-A1",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  578.5775,
+                  483,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "PLC",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  578.5775,
+                  483,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "quantity",
+              "text": "1套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  578.5775,
+                  483,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+              "chunkId": "faa8f549da4724c6:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "productName",
+              "text": "控制系统",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  60,
+                  578.5775,
+                  108,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:12",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "CTRL-A1",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  210,
+                  578.5775,
+                  252,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:13",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "PLC",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  350,
+                  578.5775,
+                  368,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:14",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "1套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  465,
+                  578.5775,
+                  483,
+                  590.5775
+                ]
+              },
+              "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:15",
+              "chunkId": "faa8f549da4724c6:chunk:2",
+              "confidence": 0.62,
+              "originKind": "table-cell"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "喷涂主机",
+            "model": "SP-3000",
+            "specifications": {
+              "规格": "18.5kW"
+            },
+            "quantity": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "material": null,
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          },
+          {
+            "productName": "输送模块",
+            "model": "CV-1200",
+            "specifications": {
+              "规格": "1200mm"
+            },
+            "quantity": {
+              "value": 2,
+              "unit": "套",
+              "raw": "2套"
+            },
+            "material": null,
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          },
+          {
+            "productName": "控制系统",
+            "model": "CTRL-A1",
+            "specifications": {
+              "规格": "PLC"
+            },
+            "quantity": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "material": null,
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          }
+        ],
+        "expectedProductCount": 3,
+        "actualProductCount": 3,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "productName",
+            "expected": "喷涂主机",
+            "actual": "喷涂主机",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "actual": "SP-3000",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "quantity",
+            "expected": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "actual": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "specifications",
+            "expected": {
+              "规格": "18.5kW"
+            },
+            "actual": {
+              "规格": "18.5kW"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "material",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "productName",
+            "expected": "输送模块",
+            "actual": "输送模块",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "model",
+            "expected": "CV-1200",
+            "actual": "CV-1200",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "quantity",
+            "expected": {
+              "value": 2,
+              "unit": "套",
+              "raw": "2套"
+            },
+            "actual": {
+              "value": 2,
+              "unit": "套",
+              "raw": "2套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "specifications",
+            "expected": {
+              "规格": "1200mm"
+            },
+            "actual": {
+              "规格": "1200mm"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "material",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CTRL-A1",
+            "field": "productName",
+            "expected": "控制系统",
+            "actual": "控制系统",
+            "correct": true
+          },
+          {
+            "productKey": "CTRL-A1",
+            "field": "model",
+            "expected": "CTRL-A1",
+            "actual": "CTRL-A1",
+            "correct": true
+          },
+          {
+            "productKey": "CTRL-A1",
+            "field": "quantity",
+            "expected": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "actual": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "CTRL-A1",
+            "field": "specifications",
+            "expected": {
+              "规格": "PLC"
+            },
+            "actual": {
+              "规格": "PLC"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "CTRL-A1",
+            "field": "material",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CTRL-A1",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CTRL-A1",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_b1818b99",
+            "field": "productName",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b1818b99",
+            "field": "model",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b1818b99",
+            "field": "specifications.规格",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b1818b99",
+            "field": "quantity",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b1818b99",
+            "field": "productName",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b1818b99",
+            "field": "model",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b1818b99",
+            "field": "specifications.规格",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:6",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b1818b99",
+            "field": "quantity",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:7",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "productName",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "model",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "specifications.规格",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "quantity",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "productName",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:8",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "model",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:9",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "specifications.规格",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:10",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_9ff17b1e",
+            "field": "quantity",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:11",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "productName",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "model",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "specifications.规格",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "quantity",
+            "evidenceId": "faa8f549da4724c6:block:pdf-block-5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "productName",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:12",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "model",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:13",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "specifications.规格",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:14",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_75ef2699",
+            "field": "quantity",
+            "evidenceId": "faa8f549da4724c6:table:pdf-table-1:r0:c0:15",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 24,
+        "evidenceValid": 24,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 9,
+        "missingExpectedFieldCorrect": 9,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 1,
+        "actualSourceFileCount": 1,
+        "correctMergeCount": 0,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 0,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [],
+        "actualWarningCodes": [],
+        "missingExpectedWarningCodes": []
+      }
+    },
+    {
+      "sampleId": "excel-products",
+      "sampleType": "Excel产品清单",
+      "sourceFiles": [
+        "input.xlsx"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {
+            "规格": "18.5kW"
+          },
+          "quantity": {
+            "value": 1,
+            "unit": null,
+            "raw": "1"
+          },
+          "material": "不锈钢",
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        },
+        {
+          "productName": "输送模块",
+          "model": "CV-1200",
+          "specifications": {
+            "规格": "1200mm"
+          },
+          "quantity": {
+            "value": 2,
+            "unit": null,
+            "raw": "2"
+          },
+          "material": "碳钢",
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        }
+      ],
+      "requestCount": 1,
+      "chunkCount": 1,
+      "inputChars": 67,
+      "inputTokens": 1182,
+      "outputTokens": 2773,
+      "totalTokens": 3955,
+      "durationMs": 20202,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 91,
+        "blocksTextLength": 0,
+        "tablesTextLength": 67,
+        "imageOcrTextLength": 0,
+        "rawTextSentDirectly": false,
+        "chunkCount": 1,
+        "chunks": [
+          {
+            "chunkId": "08f5c702298639fc:chunk:1",
+            "evidenceChars": 67,
+            "promptTemplateChars": 811,
+            "userPromptChars": 1411,
+            "messagesChars": 2222,
+            "sourceKinds": [
+              "table-cell"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbt5r8_4",
+          "sampleId": "excel-products",
+          "chunkId": "08f5c702298639fc:chunk:1",
+          "startedAt": "2026-08-09T04:52:21.476Z",
+          "durationMs": 20201,
+          "inputChars": 2268,
+          "inputTokens": 1182,
+          "outputTokens": 2773,
+          "totalTokens": 3955,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 2,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_b6ebb2df",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {
+            "规格": "18.5kW"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 1,
+            "unit": null,
+            "raw": "1"
+          },
+          "material": "不锈钢",
+          "process": null,
+          "application": null,
+          "notes": [
+            "接现有产线"
+          ],
+          "confidence": 0.94,
+          "fieldConfidence": {
+            "productName": 0.94,
+            "model": 0.94,
+            "quantity": 0.94,
+            "material": 0.94,
+            "process": 0,
+            "application": 0,
+            "specifications.规格": 0.94
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "自动喷涂设备",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "A2",
+                "row": 2,
+                "column": 1
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c1:6",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "B2",
+                "row": 2,
+                "column": 2
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c2:7",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "18.5kW",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "C2",
+                "row": 2,
+                "column": 3
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c3:8",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "1",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "D2",
+                "row": 2,
+                "column": 4
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c4:9",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "material",
+              "text": "不锈钢",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "E2",
+                "row": 2,
+                "column": 5
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c5:10",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "notes",
+              "text": "接现有产线",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "F2",
+                "row": 2,
+                "column": 6
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c6:11",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            }
+          ]
+        },
+        {
+          "id": "ext_ef743444",
+          "productName": "输送模块",
+          "model": "CV-1200",
+          "specifications": {
+            "规格": "1200mm"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 2,
+            "unit": null,
+            "raw": "2"
+          },
+          "material": "碳钢",
+          "process": null,
+          "application": null,
+          "notes": [
+            "待确认长度"
+          ],
+          "confidence": 0.94,
+          "fieldConfidence": {
+            "productName": 0.94,
+            "model": 0.94,
+            "quantity": 0.94,
+            "material": 0.94,
+            "process": 0,
+            "application": 0,
+            "specifications.规格": 0.94
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "输送模块",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "A3",
+                "row": 3,
+                "column": 1
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c1:12",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "CV-1200",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "B3",
+                "row": 3,
+                "column": 2
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c2:13",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "1200mm",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "C3",
+                "row": 3,
+                "column": 3
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c3:14",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "2",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "D3",
+                "row": 3,
+                "column": 4
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c4:15",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "material",
+              "text": "碳钢",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "E3",
+                "row": 3,
+                "column": 5
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c5:16",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "notes",
+              "text": "待确认长度",
+              "file": "input.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品清单",
+                "cell": "F3",
+                "row": 3,
+                "column": 6
+              },
+              "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c6:17",
+              "chunkId": "08f5c702298639fc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "自动喷涂设备",
+            "model": "SP-3000",
+            "specifications": {
+              "规格": "18.5kW"
+            },
+            "quantity": {
+              "value": 1,
+              "unit": null,
+              "raw": "1"
+            },
+            "material": "不锈钢",
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          },
+          {
+            "productName": "输送模块",
+            "model": "CV-1200",
+            "specifications": {
+              "规格": "1200mm"
+            },
+            "quantity": {
+              "value": 2,
+              "unit": null,
+              "raw": "2"
+            },
+            "material": "碳钢",
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          }
+        ],
+        "expectedProductCount": 2,
+        "actualProductCount": 2,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "productName",
+            "expected": "自动喷涂设备",
+            "actual": "自动喷涂设备",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "actual": "SP-3000",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "quantity",
+            "expected": {
+              "value": 1,
+              "unit": null,
+              "raw": "1"
+            },
+            "actual": {
+              "value": 1,
+              "unit": null,
+              "raw": "1"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "specifications",
+            "expected": {
+              "规格": "18.5kW"
+            },
+            "actual": {
+              "规格": "18.5kW"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "material",
+            "expected": "不锈钢",
+            "actual": "不锈钢",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "productName",
+            "expected": "输送模块",
+            "actual": "输送模块",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "model",
+            "expected": "CV-1200",
+            "actual": "CV-1200",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "quantity",
+            "expected": {
+              "value": 2,
+              "unit": null,
+              "raw": "2"
+            },
+            "actual": {
+              "value": 2,
+              "unit": null,
+              "raw": "2"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "specifications",
+            "expected": {
+              "规格": "1200mm"
+            },
+            "actual": {
+              "规格": "1200mm"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "material",
+            "expected": "碳钢",
+            "actual": "碳钢",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_b6ebb2df",
+            "field": "productName",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c1:6",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b6ebb2df",
+            "field": "model",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c2:7",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b6ebb2df",
+            "field": "specifications.规格",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c3:8",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b6ebb2df",
+            "field": "quantity",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c4:9",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b6ebb2df",
+            "field": "material",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c5:10",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_b6ebb2df",
+            "field": "notes",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r2:c6:11",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_ef743444",
+            "field": "productName",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c1:12",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_ef743444",
+            "field": "model",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c2:13",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_ef743444",
+            "field": "specifications.规格",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c3:14",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_ef743444",
+            "field": "quantity",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c4:15",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_ef743444",
+            "field": "material",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c5:16",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_ef743444",
+            "field": "notes",
+            "evidenceId": "08f5c702298639fc:table:sheet-产品清单:r3:c6:17",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 12,
+        "evidenceValid": 12,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 4,
+        "missingExpectedFieldCorrect": 4,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 1,
+        "actualSourceFileCount": 1,
+        "correctMergeCount": 0,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 0,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [],
+        "actualWarningCodes": [],
+        "missingExpectedWarningCodes": []
+      }
+    },
+    {
+      "sampleId": "docx-request",
+      "sampleType": "DOCX采购需求",
+      "sourceFiles": [
+        "input.docx"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {
+            "日产量": "约3000件"
+          },
+          "quantity": {
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": "不锈钢",
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        },
+        {
+          "productName": "输送模块",
+          "model": "CV-1200",
+          "specifications": {},
+          "quantity": {
+            "value": 2,
+            "unit": "套",
+            "raw": "2套"
+          },
+          "material": "碳钢",
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        }
+      ],
+      "requestCount": 2,
+      "chunkCount": 2,
+      "inputChars": 93,
+      "inputTokens": 1751,
+      "outputTokens": 6208,
+      "totalTokens": 7959,
+      "durationMs": 36744,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 108,
+        "blocksTextLength": 50,
+        "tablesTextLength": 43,
+        "imageOcrTextLength": 0,
+        "rawTextSentDirectly": false,
+        "chunkCount": 2,
+        "chunks": [
+          {
+            "chunkId": "1708af4155a99e0d:chunk:1",
+            "evidenceChars": 50,
+            "promptTemplateChars": 811,
+            "userPromptChars": 500,
+            "messagesChars": 1311,
+            "sourceKinds": [
+              "text"
+            ]
+          },
+          {
+            "chunkId": "1708af4155a99e0d:chunk:2",
+            "evidenceChars": 43,
+            "promptTemplateChars": 811,
+            "userPromptChars": 1223,
+            "messagesChars": 2034,
+            "sourceKinds": [
+              "table-cell"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbtlef_6",
+          "sampleId": "docx-request",
+          "chunkId": "1708af4155a99e0d:chunk:2",
+          "startedAt": "2026-08-09T04:52:41.751Z",
+          "durationMs": 13449,
+          "inputChars": 2080,
+          "inputTokens": 1068,
+          "outputTokens": 2188,
+          "totalTokens": 3256,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 2,
+          "errorCode": null
+        },
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbtlef_5",
+          "sampleId": "docx-request",
+          "chunkId": "1708af4155a99e0d:chunk:1",
+          "startedAt": "2026-08-09T04:52:41.751Z",
+          "durationMs": 36744,
+          "inputChars": 1357,
+          "inputTokens": 683,
+          "outputTokens": 4020,
+          "totalTokens": 4703,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_f030d662",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {
+            "日产量": "约3000件"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": "不锈钢",
+          "process": null,
+          "application": "需要接入现有生产线",
+          "notes": [],
+          "confidence": 0.87,
+          "fieldConfidence": {
+            "productName": 0.88,
+            "model": 0.88,
+            "quantity": 0.86,
+            "material": 0.86,
+            "process": 0,
+            "application": 0.86,
+            "specifications.日产量": 0.86
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "自动喷涂设备",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "paragraph": 2
+              },
+              "evidenceId": "1708af4155a99e0d:block:docx-block-2",
+              "chunkId": "1708af4155a99e0d:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "paragraph": 2
+              },
+              "evidenceId": "1708af4155a99e0d:block:docx-block-2",
+              "chunkId": "1708af4155a99e0d:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "specifications.日产量",
+              "text": "日产约3000件",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "paragraph": 3
+              },
+              "evidenceId": "1708af4155a99e0d:block:docx-block-3",
+              "chunkId": "1708af4155a99e0d:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "application",
+              "text": "需要接入现有生产线",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "paragraph": 4
+              },
+              "evidenceId": "1708af4155a99e0d:block:docx-block-4",
+              "chunkId": "1708af4155a99e0d:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "productName",
+              "text": "自动喷涂设备",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 2,
+                "cell": 1
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:4",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 2,
+                "cell": 2
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:5",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "1套",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 2,
+                "cell": 3
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:6",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "material",
+              "text": "不锈钢",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 2,
+                "cell": 4
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:7",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            }
+          ]
+        },
+        {
+          "id": "ext_8919b03e",
+          "productName": "输送模块",
+          "model": "CV-1200",
+          "specifications": {},
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 2,
+            "unit": "套",
+            "raw": "2套"
+          },
+          "material": "碳钢",
+          "process": null,
+          "application": null,
+          "notes": [],
+          "confidence": 0.86,
+          "fieldConfidence": {
+            "productName": 0.86,
+            "model": 0.86,
+            "quantity": 0.86,
+            "material": 0.86,
+            "process": 0,
+            "application": 0
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "输送模块",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 3,
+                "cell": 1
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:8",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "CV-1200",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 3,
+                "cell": 2
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:9",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "2套",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 3,
+                "cell": 3
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:10",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "material",
+              "text": "碳钢",
+              "file": "input.docx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "docx",
+                "table": 1,
+                "row": 3,
+                "cell": 4
+              },
+              "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:11",
+              "chunkId": "1708af4155a99e0d:chunk:2",
+              "confidence": 0.95,
+              "originKind": "table-cell"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "自动喷涂设备",
+            "model": "SP-3000",
+            "specifications": {
+              "日产量": "约3000件"
+            },
+            "quantity": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "material": "不锈钢",
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          },
+          {
+            "productName": "输送模块",
+            "model": "CV-1200",
+            "specifications": {},
+            "quantity": {
+              "value": 2,
+              "unit": "套",
+              "raw": "2套"
+            },
+            "material": "碳钢",
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          }
+        ],
+        "expectedProductCount": 2,
+        "actualProductCount": 2,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "productName",
+            "expected": "自动喷涂设备",
+            "actual": "自动喷涂设备",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "actual": "SP-3000",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "quantity",
+            "expected": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "actual": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "specifications",
+            "expected": {
+              "日产量": "约3000件"
+            },
+            "actual": {
+              "日产量": "约3000件"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "material",
+            "expected": "不锈钢",
+            "actual": "不锈钢",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "application",
+            "expected": null,
+            "actual": "需要接入现有生产线",
+            "correct": false
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "productName",
+            "expected": "输送模块",
+            "actual": "输送模块",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "model",
+            "expected": "CV-1200",
+            "actual": "CV-1200",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "quantity",
+            "expected": {
+              "value": 2,
+              "unit": "套",
+              "raw": "2套"
+            },
+            "actual": {
+              "value": 2,
+              "unit": "套",
+              "raw": "2套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "specifications",
+            "expected": {},
+            "actual": {},
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "material",
+            "expected": "碳钢",
+            "actual": "碳钢",
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "CV-1200",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_f030d662",
+            "field": "productName",
+            "evidenceId": "1708af4155a99e0d:block:docx-block-2",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_f030d662",
+            "field": "model",
+            "evidenceId": "1708af4155a99e0d:block:docx-block-2",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_f030d662",
+            "field": "specifications.日产量",
+            "evidenceId": "1708af4155a99e0d:block:docx-block-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_f030d662",
+            "field": "application",
+            "evidenceId": "1708af4155a99e0d:block:docx-block-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_f030d662",
+            "field": "productName",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_f030d662",
+            "field": "model",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_f030d662",
+            "field": "quantity",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:6",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_f030d662",
+            "field": "material",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:7",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_8919b03e",
+            "field": "productName",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:8",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_8919b03e",
+            "field": "model",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:9",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_8919b03e",
+            "field": "quantity",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:10",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_8919b03e",
+            "field": "material",
+            "evidenceId": "1708af4155a99e0d:table:docx-table-1:r0:c0:11",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 12,
+        "evidenceValid": 12,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 5,
+        "missingExpectedFieldCorrect": 4,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 1,
+        "actualSourceFileCount": 1,
+        "correctMergeCount": 0,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 0,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [],
+        "actualWarningCodes": [],
+        "missingExpectedWarningCodes": []
+      }
+    },
+    {
+      "sampleId": "ocr-low-confidence-model",
+      "sampleType": "低质量OCR型号",
+      "sourceFiles": [
+        "input.png"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "自动 喷涂 设备",
+          "model": "9P-3000",
+          "specifications": {
+            "产能": "3000 件 /天"
+          },
+          "quantity": {
+            "value": 1,
+            "unit": "套",
+            "raw": "1 套"
+          },
+          "material": "不 锈 钢",
+          "process": null,
+          "application": null,
+          "expectedHumanReview": true,
+          "expectedWarnings": [
+            "OCR_MODEL_UNCERTAIN"
+          ]
+        }
+      ],
+      "requestCount": 1,
+      "chunkCount": 1,
+      "inputChars": 82,
+      "inputTokens": 844,
+      "outputTokens": 2759,
+      "totalTokens": 3603,
+      "durationMs": 22582,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 87,
+        "blocksTextLength": 82,
+        "tablesTextLength": 0,
+        "imageOcrTextLength": 87,
+        "rawTextSentDirectly": false,
+        "chunkCount": 1,
+        "chunks": [
+          {
+            "chunkId": "5baa41dd52e2b325:chunk:1",
+            "evidenceChars": 82,
+            "promptTemplateChars": 811,
+            "userPromptChars": 743,
+            "messagesChars": 1554,
+            "sourceKinds": [
+              "ocr"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbueci_7",
+          "sampleId": "ocr-low-confidence-model",
+          "chunkId": "5baa41dd52e2b325:chunk:1",
+          "startedAt": "2026-08-09T04:53:19.266Z",
+          "durationMs": 22580,
+          "inputChars": 1600,
+          "inputTokens": 844,
+          "outputTokens": 2759,
+          "totalTokens": 3603,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_479e6174",
+          "productName": "自动 喷涂 设备",
+          "model": "9P-3000",
+          "specifications": {
+            "产能": "3000 件 /天"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 1,
+            "unit": "套",
+            "raw": "1 套"
+          },
+          "material": "不 锈 钢",
+          "process": null,
+          "application": null,
+          "notes": [],
+          "confidence": 0.68,
+          "fieldConfidence": {
+            "productName": 0.68,
+            "model": 0.68,
+            "quantity": 0.68,
+            "material": 0.68,
+            "process": 0,
+            "application": 0,
+            "specifications.产能": 0.68
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "自动 喷涂 设备",
+              "file": "input.png",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "image",
+                "imageId": "image-5baa41dd52e2",
+                "bbox": [
+                  71,
+                  152,
+                  575,
+                  196
+                ]
+              },
+              "evidenceId": "5baa41dd52e2b325:block:ocr-line-2",
+              "chunkId": "5baa41dd52e2b325:chunk:1",
+              "confidence": 0.94,
+              "originKind": "ocr"
+            },
+            {
+              "field": "model",
+              "text": "9P-3000",
+              "file": "input.png",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "image",
+                "imageId": "image-5baa41dd52e2",
+                "bbox": [
+                  71,
+                  231,
+                  388,
+                  273
+                ]
+              },
+              "evidenceId": "5baa41dd52e2b325:block:ocr-line-3",
+              "chunkId": "5baa41dd52e2b325:chunk:1",
+              "confidence": 0.89,
+              "originKind": "ocr"
+            },
+            {
+              "field": "quantity",
+              "text": "1 套",
+              "file": "input.png",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "image",
+                "imageId": "image-5baa41dd52e2",
+                "bbox": [
+                  71,
+                  308,
+                  281,
+                  352
+                ]
+              },
+              "evidenceId": "5baa41dd52e2b325:block:ocr-line-4",
+              "chunkId": "5baa41dd52e2b325:chunk:1",
+              "confidence": 0.91,
+              "originKind": "ocr"
+            },
+            {
+              "field": "material",
+              "text": "不 锈 钢",
+              "file": "input.png",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "image",
+                "imageId": "image-5baa41dd52e2",
+                "bbox": [
+                  71,
+                  386,
+                  343,
+                  430
+                ]
+              },
+              "evidenceId": "5baa41dd52e2b325:block:ocr-line-5",
+              "chunkId": "5baa41dd52e2b325:chunk:1",
+              "confidence": 0.88,
+              "originKind": "ocr"
+            },
+            {
+              "field": "specifications.产能",
+              "text": "3000 件 /天",
+              "file": "input.png",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "image",
+                "imageId": "image-5baa41dd52e2",
+                "bbox": [
+                  71,
+                  464,
+                  426,
+                  508
+                ]
+              },
+              "evidenceId": "5baa41dd52e2b325:block:ocr-line-6",
+              "chunkId": "5baa41dd52e2b325:chunk:1",
+              "confidence": 0.93,
+              "originKind": "ocr"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "自动 喷涂 设备",
+            "model": "9P-3000",
+            "specifications": {
+              "产能": "3000 件 /天"
+            },
+            "quantity": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1 套"
+            },
+            "material": "不 锈 钢",
+            "process": null,
+            "application": null,
+            "expectedHumanReview": true,
+            "expectedWarnings": [
+              "OCR_MODEL_UNCERTAIN"
+            ]
+          }
+        ],
+        "expectedProductCount": 1,
+        "actualProductCount": 1,
+        "fieldChecks": [
+          {
+            "productKey": "9P-3000",
+            "field": "productName",
+            "expected": "自动 喷涂 设备",
+            "actual": "自动 喷涂 设备",
+            "correct": true
+          },
+          {
+            "productKey": "9P-3000",
+            "field": "model",
+            "expected": "9P-3000",
+            "actual": "9P-3000",
+            "correct": true
+          },
+          {
+            "productKey": "9P-3000",
+            "field": "quantity",
+            "expected": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1 套"
+            },
+            "actual": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1 套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "9P-3000",
+            "field": "specifications",
+            "expected": {
+              "产能": "3000 件 /天"
+            },
+            "actual": {
+              "产能": "3000 件 /天"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "9P-3000",
+            "field": "material",
+            "expected": "不 锈 钢",
+            "actual": "不 锈 钢",
+            "correct": true
+          },
+          {
+            "productKey": "9P-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "9P-3000",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_479e6174",
+            "field": "productName",
+            "evidenceId": "5baa41dd52e2b325:block:ocr-line-2",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_479e6174",
+            "field": "model",
+            "evidenceId": "5baa41dd52e2b325:block:ocr-line-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_479e6174",
+            "field": "quantity",
+            "evidenceId": "5baa41dd52e2b325:block:ocr-line-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_479e6174",
+            "field": "material",
+            "evidenceId": "5baa41dd52e2b325:block:ocr-line-5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_479e6174",
+            "field": "specifications.产能",
+            "evidenceId": "5baa41dd52e2b325:block:ocr-line-6",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 5,
+        "evidenceValid": 5,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 2,
+        "missingExpectedFieldCorrect": 2,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 1,
+        "actualSourceFileCount": 1,
+        "correctMergeCount": 0,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 1,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [
+          "OCR_MODEL_UNCERTAIN"
+        ],
+        "actualWarningCodes": [],
+        "missingExpectedWarningCodes": [
+          "OCR_MODEL_UNCERTAIN"
+        ]
+      }
+    },
+    {
+      "sampleId": "ocr-nameplate-regression",
+      "sampleType": "OCR去重前后性能对照",
+      "sourceFiles": [
+        "input.jpg"
+      ],
+      "expectedSummary": [
+        {
+          "productName": null,
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": {
+            "value": null,
+            "unit": null,
+            "raw": null
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "expectedHumanReview": true,
+          "expectedWarnings": [
+            "OCR_MODEL_UNCERTAIN"
+          ]
+        }
+      ],
+      "requestCount": 1,
+      "chunkCount": 1,
+      "inputChars": 105,
+      "inputTokens": 842,
+      "outputTokens": 6408,
+      "totalTokens": 7250,
+      "durationMs": 50325,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 110,
+        "blocksTextLength": 105,
+        "tablesTextLength": 0,
+        "imageOcrTextLength": 110,
+        "rawTextSentDirectly": false,
+        "chunkCount": 1,
+        "chunks": [
+          {
+            "chunkId": "1f015b4a7d25aff5:chunk:1",
+            "evidenceChars": 105,
+            "promptTemplateChars": 811,
+            "userPromptChars": 766,
+            "messagesChars": 1577,
+            "sourceKinds": [
+              "ocr"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbuwcp_8",
+          "sampleId": "ocr-nameplate-regression",
+          "chunkId": "1f015b4a7d25aff5:chunk:1",
+          "startedAt": "2026-08-09T04:53:42.601Z",
+          "durationMs": 50325,
+          "inputChars": 1623,
+          "inputTokens": 842,
+          "outputTokens": 6408,
+          "totalTokens": 7250,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        }
+      ],
+      "products": [],
+      "warnings": [
+        {
+          "schemaVersion": "1.0",
+          "code": "UNKNOWN_EVIDENCE_REFERENCE",
+          "message": "AI引用了不存在的来源证据",
+          "field": "productName",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "UNKNOWN_EVIDENCE_REFERENCE",
+          "message": "AI引用了不存在的来源证据",
+          "field": "model",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "UNKNOWN_EVIDENCE_REFERENCE",
+          "message": "AI引用了不存在的来源证据",
+          "field": "specifications.POWER",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "UNKNOWN_EVIDENCE_REFERENCE",
+          "message": "AI引用了不存在的来源证据",
+          "field": "specifications.VOLTIAGE",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "UNKNOWN_EVIDENCE_REFERENCE",
+          "message": "AI引用了不存在的来源证据",
+          "field": "specifications.SERIAL",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "UNKNOWN_EVIDENCE_REFERENCE",
+          "message": "AI引用了不存在的来源证据",
+          "field": "notes",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "MISSING_FIELD_EVIDENCE",
+          "message": "非空字段缺少来源证据，已置空",
+          "field": "productName",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "MISSING_FIELD_EVIDENCE",
+          "message": "非空字段缺少来源证据，已置空",
+          "field": "model",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "MISSING_FIELD_EVIDENCE",
+          "message": "非空字段缺少来源证据，已置空",
+          "field": "specifications.POWER",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "MISSING_FIELD_EVIDENCE",
+          "message": "非空字段缺少来源证据，已置空",
+          "field": "specifications.VOLTIAGE",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "MISSING_FIELD_EVIDENCE",
+          "message": "非空字段缺少来源证据，已置空",
+          "field": "specifications.SERIAL",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "MISSING_FIELD_EVIDENCE",
+          "message": "非空字段缺少来源证据，已置空",
+          "field": "notes",
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "EMPTY_PRODUCT_DROPPED",
+          "message": "无可验证产品字段的记录已忽略",
+          "field": null,
+          "productId": "ext_515fb71b",
+          "sourceFile": "input.jpg",
+          "sourceLocations": []
+        }
+      ],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": null,
+            "model": "SP-3000",
+            "specifications": {},
+            "quantity": {
+              "value": null,
+              "unit": null,
+              "raw": null
+            },
+            "material": null,
+            "process": null,
+            "application": null,
+            "expectedHumanReview": true,
+            "expectedWarnings": [
+              "OCR_MODEL_UNCERTAIN"
+            ]
+          }
+        ],
+        "expectedProductCount": 1,
+        "actualProductCount": 0,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "correct": false
+          }
+        ],
+        "evidenceChecks": [],
+        "evidenceTotal": 0,
+        "evidenceValid": 0,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 0,
+        "missingExpectedFieldCorrect": 0,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 1,
+        "actualSourceFileCount": 0,
+        "correctMergeCount": 0,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 1,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 1,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [
+          "OCR_MODEL_UNCERTAIN"
+        ],
+        "actualWarningCodes": [
+          "UNKNOWN_EVIDENCE_REFERENCE",
+          "MISSING_FIELD_EVIDENCE",
+          "EMPTY_PRODUCT_DROPPED"
+        ],
+        "missingExpectedWarningCodes": [
+          "OCR_MODEL_UNCERTAIN"
+        ]
+      }
+    },
+    {
+      "sampleId": "missing-fields",
+      "sampleType": "缺字段Excel",
+      "sourceFiles": [
+        "missing-fields.xlsx"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": {
+            "value": null,
+            "unit": null,
+            "raw": null
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        }
+      ],
+      "requestCount": 1,
+      "chunkCount": 1,
+      "inputChars": 19,
+      "inputTokens": 667,
+      "outputTokens": 739,
+      "totalTokens": 1406,
+      "durationMs": 6191,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 29,
+        "blocksTextLength": 0,
+        "tablesTextLength": 19,
+        "imageOcrTextLength": 0,
+        "rawTextSentDirectly": false,
+        "chunkCount": 1,
+        "chunks": [
+          {
+            "chunkId": "f034bec5a0b84359:chunk:1",
+            "evidenceChars": 19,
+            "promptTemplateChars": 811,
+            "userPromptChars": 440,
+            "messagesChars": 1251,
+            "sourceKinds": [
+              "table-cell"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbvz70_9",
+          "sampleId": "missing-fields",
+          "chunkId": "f034bec5a0b84359:chunk:1",
+          "startedAt": "2026-08-09T04:54:32.940Z",
+          "durationMs": 6190,
+          "inputChars": 1297,
+          "inputTokens": 667,
+          "outputTokens": 739,
+          "totalTokens": 1406,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_ed9fad40",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": null,
+            "unit": null,
+            "raw": null
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "notes": [],
+          "confidence": 0.627,
+          "fieldConfidence": {
+            "productName": 0.94,
+            "model": 0.94,
+            "quantity": 0,
+            "material": 0,
+            "process": 0,
+            "application": 0
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "自动喷涂设备",
+              "file": "missing-fields.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品需求",
+                "cell": "A2",
+                "row": 2,
+                "column": 1
+              },
+              "evidenceId": "f034bec5a0b84359:table:sheet-产品需求:r2:c1:2",
+              "chunkId": "f034bec5a0b84359:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "missing-fields.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "产品需求",
+                "cell": "B2",
+                "row": 2,
+                "column": 2
+              },
+              "evidenceId": "f034bec5a0b84359:table:sheet-产品需求:r2:c2:3",
+              "chunkId": "f034bec5a0b84359:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "自动喷涂设备",
+            "model": "SP-3000",
+            "specifications": {},
+            "quantity": {
+              "value": null,
+              "unit": null,
+              "raw": null
+            },
+            "material": null,
+            "process": null,
+            "application": null,
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          }
+        ],
+        "expectedProductCount": 1,
+        "actualProductCount": 1,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "productName",
+            "expected": "自动喷涂设备",
+            "actual": "自动喷涂设备",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "actual": "SP-3000",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "quantity",
+            "expected": {
+              "value": null,
+              "unit": null,
+              "raw": null
+            },
+            "actual": {
+              "value": null,
+              "unit": null,
+              "raw": null
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "specifications",
+            "expected": {},
+            "actual": {},
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "material",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_ed9fad40",
+            "field": "productName",
+            "evidenceId": "f034bec5a0b84359:table:sheet-产品需求:r2:c1:2",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_ed9fad40",
+            "field": "model",
+            "evidenceId": "f034bec5a0b84359:table:sheet-产品需求:r2:c2:3",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 2,
+        "evidenceValid": 2,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 5,
+        "missingExpectedFieldCorrect": 5,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 1,
+        "actualSourceFileCount": 1,
+        "correctMergeCount": 0,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 0,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [],
+        "actualWarningCodes": [],
+        "missingExpectedWarningCodes": []
+      }
+    },
+    {
+      "sampleId": "conflicting-fields",
+      "sampleType": "跨文件型号与数量冲突",
+      "sourceFiles": [
+        "conflict-a.xlsx",
+        "conflict-b.xlsx"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": {
+            "value": 10,
+            "unit": "套",
+            "raw": "10套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "expectedHumanReview": true,
+          "expectedWarnings": [
+            "FIELD_CONFLICT"
+          ]
+        }
+      ],
+      "requestCount": 2,
+      "chunkCount": 2,
+      "inputChars": 48,
+      "inputTokens": 1494,
+      "outputTokens": 1234,
+      "totalTokens": 2728,
+      "durationMs": 5531,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 70,
+        "blocksTextLength": 0,
+        "tablesTextLength": 48,
+        "imageOcrTextLength": 0,
+        "rawTextSentDirectly": false,
+        "chunkCount": 2,
+        "chunks": [
+          {
+            "chunkId": "29b0b55f77c59dbc:chunk:1",
+            "evidenceChars": 24,
+            "promptTemplateChars": 811,
+            "userPromptChars": 565,
+            "messagesChars": 1376,
+            "sourceKinds": [
+              "table-cell"
+            ]
+          },
+          {
+            "chunkId": "ec624e58e52ab965:chunk:1",
+            "evidenceChars": 24,
+            "promptTemplateChars": 811,
+            "userPromptChars": 565,
+            "messagesChars": 1376,
+            "sourceKinds": [
+              "table-cell"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbw3zb_11",
+          "sampleId": "conflicting-fields",
+          "chunkId": "ec624e58e52ab965:chunk:1",
+          "startedAt": "2026-08-09T04:54:39.143Z",
+          "durationMs": 3920,
+          "inputChars": 1422,
+          "inputTokens": 740,
+          "outputTokens": 509,
+          "totalTokens": 1249,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        },
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbw3zb_10",
+          "sampleId": "conflicting-fields",
+          "chunkId": "29b0b55f77c59dbc:chunk:1",
+          "startedAt": "2026-08-09T04:54:39.143Z",
+          "durationMs": 5530,
+          "inputChars": 1422,
+          "inputTokens": 754,
+          "outputTokens": 725,
+          "totalTokens": 1479,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_05471edf",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 10,
+            "unit": "套",
+            "raw": "10套"
+          },
+          "material": null,
+          "process": null,
+          "application": null,
+          "notes": [],
+          "confidence": 0.767,
+          "fieldConfidence": {
+            "productName": 1,
+            "model": 0.65,
+            "quantity": 0.65,
+            "material": 0,
+            "process": 0,
+            "application": 0
+          },
+          "needsHumanReview": true,
+          "warnings": [
+            {
+              "schemaVersion": "1.0",
+              "code": "FIELD_CONFLICT",
+              "message": "model存在多来源冲突，未静默覆盖",
+              "field": "model",
+              "productId": "ext_05471edf",
+              "sourceFile": "conflict-a.xlsx",
+              "sourceLocations": [
+                {
+                  "schemaVersion": "1.0",
+                  "kind": "sheet",
+                  "sheet": "需求A",
+                  "cell": "B2",
+                  "row": 2,
+                  "column": 2
+                },
+                {
+                  "schemaVersion": "1.0",
+                  "kind": "sheet",
+                  "sheet": "需求B",
+                  "cell": "B2",
+                  "row": 2,
+                  "column": 2
+                }
+              ]
+            },
+            {
+              "schemaVersion": "1.0",
+              "code": "FIELD_CONFLICT",
+              "message": "quantity存在多来源冲突，未静默覆盖",
+              "field": "quantity",
+              "productId": "ext_05471edf",
+              "sourceFile": "conflict-a.xlsx",
+              "sourceLocations": [
+                {
+                  "schemaVersion": "1.0",
+                  "kind": "sheet",
+                  "sheet": "需求A",
+                  "cell": "C2",
+                  "row": 2,
+                  "column": 3
+                },
+                {
+                  "schemaVersion": "1.0",
+                  "kind": "sheet",
+                  "sheet": "需求B",
+                  "cell": "C2",
+                  "row": 2,
+                  "column": 3
+                }
+              ]
+            }
+          ],
+          "conflicts": [
+            {
+              "schemaVersion": "1.0",
+              "field": "model",
+              "values": [
+                {
+                  "schemaVersion": "1.0",
+                  "value": "SP-3000",
+                  "evidence": [
+                    {
+                      "schemaVersion": "1.0",
+                      "field": "model",
+                      "text": "SP-3000",
+                      "source": {
+                        "schemaVersion": "1.0",
+                        "kind": "sheet",
+                        "sheet": "需求A",
+                        "cell": "B2",
+                        "row": 2,
+                        "column": 2
+                      },
+                      "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c2:4",
+                      "chunkId": "29b0b55f77c59dbc:chunk:1",
+                      "sourceFile": "conflict-a.xlsx",
+                      "confidence": 1,
+                      "originKind": "table-cell"
+                    }
+                  ]
+                },
+                {
+                  "schemaVersion": "1.0",
+                  "value": "SP-3200",
+                  "evidence": [
+                    {
+                      "schemaVersion": "1.0",
+                      "field": "model",
+                      "text": "SP-3200",
+                      "source": {
+                        "schemaVersion": "1.0",
+                        "kind": "sheet",
+                        "sheet": "需求B",
+                        "cell": "B2",
+                        "row": 2,
+                        "column": 2
+                      },
+                      "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c2:4",
+                      "chunkId": "ec624e58e52ab965:chunk:1",
+                      "sourceFile": "conflict-b.xlsx",
+                      "confidence": 1,
+                      "originKind": "table-cell"
+                    }
+                  ]
+                }
+              ],
+              "message": "model存在不同来源值，需要人工确认"
+            },
+            {
+              "schemaVersion": "1.0",
+              "field": "quantity",
+              "values": [
+                {
+                  "schemaVersion": "1.0",
+                  "value": "10套",
+                  "evidence": [
+                    {
+                      "schemaVersion": "1.0",
+                      "field": "quantity",
+                      "text": "10套",
+                      "source": {
+                        "schemaVersion": "1.0",
+                        "kind": "sheet",
+                        "sheet": "需求A",
+                        "cell": "C2",
+                        "row": 2,
+                        "column": 3
+                      },
+                      "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c3:5",
+                      "chunkId": "29b0b55f77c59dbc:chunk:1",
+                      "sourceFile": "conflict-a.xlsx",
+                      "confidence": 1,
+                      "originKind": "table-cell"
+                    }
+                  ]
+                },
+                {
+                  "schemaVersion": "1.0",
+                  "value": "12套",
+                  "evidence": [
+                    {
+                      "schemaVersion": "1.0",
+                      "field": "quantity",
+                      "text": "12套",
+                      "source": {
+                        "schemaVersion": "1.0",
+                        "kind": "sheet",
+                        "sheet": "需求B",
+                        "cell": "C2",
+                        "row": 2,
+                        "column": 3
+                      },
+                      "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c3:5",
+                      "chunkId": "ec624e58e52ab965:chunk:1",
+                      "sourceFile": "conflict-b.xlsx",
+                      "confidence": 1,
+                      "originKind": "table-cell"
+                    }
+                  ]
+                }
+              ],
+              "message": "quantity存在不同来源值，需要人工确认"
+            }
+          ],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "自动喷涂设备",
+              "file": "conflict-a.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "需求A",
+                "cell": "A2",
+                "row": 2,
+                "column": 1
+              },
+              "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c1:3",
+              "chunkId": "29b0b55f77c59dbc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "conflict-a.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "需求A",
+                "cell": "B2",
+                "row": 2,
+                "column": 2
+              },
+              "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c2:4",
+              "chunkId": "29b0b55f77c59dbc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "10套",
+              "file": "conflict-a.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "需求A",
+                "cell": "C2",
+                "row": 2,
+                "column": 3
+              },
+              "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c3:5",
+              "chunkId": "29b0b55f77c59dbc:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "productName",
+              "text": "自动喷涂设备",
+              "file": "conflict-b.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "需求B",
+                "cell": "A2",
+                "row": 2,
+                "column": 1
+              },
+              "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c1:3",
+              "chunkId": "ec624e58e52ab965:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "SP-3200",
+              "file": "conflict-b.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "需求B",
+                "cell": "B2",
+                "row": 2,
+                "column": 2
+              },
+              "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c2:4",
+              "chunkId": "ec624e58e52ab965:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "quantity",
+              "text": "12套",
+              "file": "conflict-b.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "需求B",
+                "cell": "C2",
+                "row": 2,
+                "column": 3
+              },
+              "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c3:5",
+              "chunkId": "ec624e58e52ab965:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        {
+          "schemaVersion": "1.0",
+          "code": "FIELD_CONFLICT",
+          "message": "model存在多来源冲突，未静默覆盖",
+          "field": "model",
+          "productId": "ext_05471edf",
+          "sourceFile": "conflict-a.xlsx",
+          "sourceLocations": [
+            {
+              "schemaVersion": "1.0",
+              "kind": "sheet",
+              "sheet": "需求A",
+              "cell": "B2",
+              "row": 2,
+              "column": 2
+            },
+            {
+              "schemaVersion": "1.0",
+              "kind": "sheet",
+              "sheet": "需求B",
+              "cell": "B2",
+              "row": 2,
+              "column": 2
+            }
+          ]
+        },
+        {
+          "schemaVersion": "1.0",
+          "code": "FIELD_CONFLICT",
+          "message": "quantity存在多来源冲突，未静默覆盖",
+          "field": "quantity",
+          "productId": "ext_05471edf",
+          "sourceFile": "conflict-a.xlsx",
+          "sourceLocations": [
+            {
+              "schemaVersion": "1.0",
+              "kind": "sheet",
+              "sheet": "需求A",
+              "cell": "C2",
+              "row": 2,
+              "column": 3
+            },
+            {
+              "schemaVersion": "1.0",
+              "kind": "sheet",
+              "sheet": "需求B",
+              "cell": "C2",
+              "row": 2,
+              "column": 3
+            }
+          ]
+        }
+      ],
+      "conflicts": [
+        {
+          "schemaVersion": "1.0",
+          "field": "model",
+          "values": [
+            {
+              "schemaVersion": "1.0",
+              "value": "SP-3000",
+              "evidence": [
+                {
+                  "schemaVersion": "1.0",
+                  "field": "model",
+                  "text": "SP-3000",
+                  "source": {
+                    "schemaVersion": "1.0",
+                    "kind": "sheet",
+                    "sheet": "需求A",
+                    "cell": "B2",
+                    "row": 2,
+                    "column": 2
+                  },
+                  "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c2:4",
+                  "chunkId": "29b0b55f77c59dbc:chunk:1",
+                  "sourceFile": "conflict-a.xlsx",
+                  "confidence": 1,
+                  "originKind": "table-cell"
+                }
+              ]
+            },
+            {
+              "schemaVersion": "1.0",
+              "value": "SP-3200",
+              "evidence": [
+                {
+                  "schemaVersion": "1.0",
+                  "field": "model",
+                  "text": "SP-3200",
+                  "source": {
+                    "schemaVersion": "1.0",
+                    "kind": "sheet",
+                    "sheet": "需求B",
+                    "cell": "B2",
+                    "row": 2,
+                    "column": 2
+                  },
+                  "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c2:4",
+                  "chunkId": "ec624e58e52ab965:chunk:1",
+                  "sourceFile": "conflict-b.xlsx",
+                  "confidence": 1,
+                  "originKind": "table-cell"
+                }
+              ]
+            }
+          ],
+          "message": "model存在不同来源值，需要人工确认"
+        },
+        {
+          "schemaVersion": "1.0",
+          "field": "quantity",
+          "values": [
+            {
+              "schemaVersion": "1.0",
+              "value": "10套",
+              "evidence": [
+                {
+                  "schemaVersion": "1.0",
+                  "field": "quantity",
+                  "text": "10套",
+                  "source": {
+                    "schemaVersion": "1.0",
+                    "kind": "sheet",
+                    "sheet": "需求A",
+                    "cell": "C2",
+                    "row": 2,
+                    "column": 3
+                  },
+                  "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c3:5",
+                  "chunkId": "29b0b55f77c59dbc:chunk:1",
+                  "sourceFile": "conflict-a.xlsx",
+                  "confidence": 1,
+                  "originKind": "table-cell"
+                }
+              ]
+            },
+            {
+              "schemaVersion": "1.0",
+              "value": "12套",
+              "evidence": [
+                {
+                  "schemaVersion": "1.0",
+                  "field": "quantity",
+                  "text": "12套",
+                  "source": {
+                    "schemaVersion": "1.0",
+                    "kind": "sheet",
+                    "sheet": "需求B",
+                    "cell": "C2",
+                    "row": 2,
+                    "column": 3
+                  },
+                  "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c3:5",
+                  "chunkId": "ec624e58e52ab965:chunk:1",
+                  "sourceFile": "conflict-b.xlsx",
+                  "confidence": 1,
+                  "originKind": "table-cell"
+                }
+              ]
+            }
+          ],
+          "message": "quantity存在不同来源值，需要人工确认"
+        }
+      ],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "自动喷涂设备",
+            "model": "SP-3000",
+            "specifications": {},
+            "quantity": {
+              "value": 10,
+              "unit": "套",
+              "raw": "10套"
+            },
+            "material": null,
+            "process": null,
+            "application": null,
+            "expectedHumanReview": true,
+            "expectedWarnings": [
+              "FIELD_CONFLICT"
+            ]
+          }
+        ],
+        "expectedProductCount": 1,
+        "actualProductCount": 1,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "productName",
+            "expected": "自动喷涂设备",
+            "actual": "自动喷涂设备",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "actual": "SP-3000",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "quantity",
+            "expected": {
+              "value": 10,
+              "unit": "套",
+              "raw": "10套"
+            },
+            "actual": {
+              "value": 10,
+              "unit": "套",
+              "raw": "10套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "specifications",
+            "expected": {},
+            "actual": {},
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "material",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "application",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_05471edf",
+            "field": "productName",
+            "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c1:3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_05471edf",
+            "field": "model",
+            "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c2:4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_05471edf",
+            "field": "quantity",
+            "evidenceId": "29b0b55f77c59dbc:table:sheet-需求A:r2:c3:5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_05471edf",
+            "field": "productName",
+            "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c1:3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_05471edf",
+            "field": "model",
+            "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c2:4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_05471edf",
+            "field": "quantity",
+            "evidenceId": "ec624e58e52ab965:table:sheet-需求B:r2:c3:5",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 6,
+        "evidenceValid": 6,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 4,
+        "missingExpectedFieldCorrect": 4,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [
+          "model",
+          "quantity"
+        ],
+        "actualConflictFields": [
+          "model",
+          "quantity"
+        ],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 2,
+        "actualSourceFileCount": 2,
+        "correctMergeCount": 1,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 1,
+        "humanReviewActual": 1,
+        "humanReviewReasons": [
+          "model存在多来源冲突",
+          "quantity存在多来源冲突"
+        ],
+        "expectedWarningCodes": [
+          "FIELD_CONFLICT"
+        ],
+        "actualWarningCodes": [
+          "FIELD_CONFLICT"
+        ],
+        "missingExpectedWarningCodes": []
+      }
+    },
+    {
+      "sampleId": "cross-file-merge",
+      "sampleType": "跨文件同产品合并",
+      "sourceFiles": [
+        "input.pdf",
+        "merge-specs.xlsx"
+      ],
+      "expectedSummary": [
+        {
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {
+            "规格": "18.5kW"
+          },
+          "quantity": {
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": "metal parts coating",
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        }
+      ],
+      "requestCount": 2,
+      "chunkCount": 2,
+      "inputChars": 110,
+      "inputTokens": 1476,
+      "outputTokens": 1073,
+      "totalTokens": 2549,
+      "durationMs": 4600,
+      "repairAttempts": 0,
+      "schemaValid": true,
+      "errorCode": null,
+      "errorMessage": null,
+      "localDiagnostics": {
+        "rawTextLength": 127,
+        "blocksTextLength": 83,
+        "tablesTextLength": 27,
+        "imageOcrTextLength": 0,
+        "rawTextSentDirectly": false,
+        "chunkCount": 2,
+        "chunks": [
+          {
+            "chunkId": "552cd24b8a4f2189:chunk:1",
+            "evidenceChars": 83,
+            "promptTemplateChars": 811,
+            "userPromptChars": 537,
+            "messagesChars": 1348,
+            "sourceKinds": [
+              "text"
+            ]
+          },
+          {
+            "chunkId": "2492fa5f5abf5f05:chunk:1",
+            "evidenceChars": 27,
+            "promptTemplateChars": 811,
+            "userPromptChars": 579,
+            "messagesChars": 1390,
+            "sourceKinds": [
+              "table-cell"
+            ]
+          }
+        ]
+      },
+      "requests": [
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbw899_13",
+          "sampleId": "cross-file-merge",
+          "chunkId": "2492fa5f5abf5f05:chunk:1",
+          "startedAt": "2026-08-09T04:54:44.685Z",
+          "durationMs": 2937,
+          "inputChars": 1436,
+          "inputTokens": 764,
+          "outputTokens": 374,
+          "totalTokens": 1138,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        },
+        {
+          "schemaVersion": "1.0",
+          "requestId": "ds_mslbw899_12",
+          "sampleId": "cross-file-merge",
+          "chunkId": "552cd24b8a4f2189:chunk:1",
+          "startedAt": "2026-08-09T04:54:44.685Z",
+          "durationMs": 4599,
+          "inputChars": 1394,
+          "inputTokens": 712,
+          "outputTokens": 699,
+          "totalTokens": 1411,
+          "schemaValid": true,
+          "repairAttempt": 0,
+          "productCount": 1,
+          "errorCode": null
+        }
+      ],
+      "products": [
+        {
+          "id": "ext_bf666ce2",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {
+            "规格": "18.5kW"
+          },
+          "quantity": {
+            "schemaVersion": "1.0",
+            "value": 1,
+            "unit": "套",
+            "raw": "1套"
+          },
+          "material": null,
+          "process": null,
+          "application": "metal parts coating",
+          "notes": [
+            "需要接入现有生产线"
+          ],
+          "confidence": 0.95,
+          "fieldConfidence": {
+            "productName": 1,
+            "model": 1,
+            "quantity": 0.86,
+            "material": 0,
+            "process": 0,
+            "application": 0.86,
+            "specifications.规格": 0.94
+          },
+          "needsHumanReview": false,
+          "warnings": [],
+          "conflicts": [],
+          "evidence": [
+            {
+              "field": "productName",
+              "text": "产品名称：自动喷涂设备",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  734.515,
+                  188,
+                  746.515
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-2",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "model",
+              "text": "型号：SP-3000",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  720.8275,
+                  134,
+                  732.8275
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-3",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "quantity",
+              "text": "数量：1套",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  707.14,
+                  110,
+                  719.14
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-4",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "application",
+              "text": "Application: metal parts coating",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  693.4525,
+                  248,
+                  705.4525
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-5",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "notes",
+              "text": "备注：需要接入现有生产线。",
+              "file": "input.pdf",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "pdf",
+                "page": 1,
+                "bbox": [
+                  56,
+                  679.765,
+                  212,
+                  691.765
+                ]
+              },
+              "evidenceId": "552cd24b8a4f2189:block:pdf-block-6",
+              "chunkId": "552cd24b8a4f2189:chunk:1",
+              "confidence": null,
+              "originKind": "text"
+            },
+            {
+              "field": "productName",
+              "text": "自动喷涂设备",
+              "file": "merge-specs.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "补充参数",
+                "cell": "A2",
+                "row": 2,
+                "column": 1
+              },
+              "evidenceId": "2492fa5f5abf5f05:table:sheet-补充参数:r2:c1:3",
+              "chunkId": "2492fa5f5abf5f05:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "model",
+              "text": "SP-3000",
+              "file": "merge-specs.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "补充参数",
+                "cell": "B2",
+                "row": 2,
+                "column": 2
+              },
+              "evidenceId": "2492fa5f5abf5f05:table:sheet-补充参数:r2:c2:4",
+              "chunkId": "2492fa5f5abf5f05:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            },
+            {
+              "field": "specifications.规格",
+              "text": "18.5kW",
+              "file": "merge-specs.xlsx",
+              "source": {
+                "schemaVersion": "1.0",
+                "kind": "sheet",
+                "sheet": "补充参数",
+                "cell": "C2",
+                "row": 2,
+                "column": 3
+              },
+              "evidenceId": "2492fa5f5abf5f05:table:sheet-补充参数:r2:c3:5",
+              "chunkId": "2492fa5f5abf5f05:chunk:1",
+              "confidence": 1,
+              "originKind": "table-cell"
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "conflicts": [],
+      "validation": {
+        "resolvedExpectedProducts": [
+          {
+            "productName": "自动喷涂设备",
+            "model": "SP-3000",
+            "specifications": {
+              "规格": "18.5kW"
+            },
+            "quantity": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "material": null,
+            "process": null,
+            "application": "metal parts coating",
+            "expectedHumanReview": false,
+            "expectedWarnings": []
+          }
+        ],
+        "expectedProductCount": 1,
+        "actualProductCount": 1,
+        "fieldChecks": [
+          {
+            "productKey": "SP-3000",
+            "field": "productName",
+            "expected": "自动喷涂设备",
+            "actual": "自动喷涂设备",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "model",
+            "expected": "SP-3000",
+            "actual": "SP-3000",
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "quantity",
+            "expected": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "actual": {
+              "value": 1,
+              "unit": "套",
+              "raw": "1套"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "specifications",
+            "expected": {
+              "规格": "18.5kW"
+            },
+            "actual": {
+              "规格": "18.5kW"
+            },
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "material",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "process",
+            "expected": null,
+            "actual": null,
+            "correct": true
+          },
+          {
+            "productKey": "SP-3000",
+            "field": "application",
+            "expected": "metal parts coating",
+            "actual": "metal parts coating",
+            "correct": true
+          }
+        ],
+        "evidenceChecks": [
+          {
+            "productId": "ext_bf666ce2",
+            "field": "productName",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-2",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "model",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "quantity",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "application",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-5",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "notes",
+            "evidenceId": "552cd24b8a4f2189:block:pdf-block-6",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "productName",
+            "evidenceId": "2492fa5f5abf5f05:table:sheet-补充参数:r2:c1:3",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "model",
+            "evidenceId": "2492fa5f5abf5f05:table:sheet-补充参数:r2:c2:4",
+            "valid": true,
+            "reasons": []
+          },
+          {
+            "productId": "ext_bf666ce2",
+            "field": "specifications.规格",
+            "evidenceId": "2492fa5f5abf5f05:table:sheet-补充参数:r2:c3:5",
+            "valid": true,
+            "reasons": []
+          }
+        ],
+        "evidenceTotal": 8,
+        "evidenceValid": 8,
+        "evidenceInvalid": 0,
+        "evidenceAccuracy": 1,
+        "missingExpectedFieldTotal": 2,
+        "missingExpectedFieldCorrect": 2,
+        "hallucinatedFieldCount": 0,
+        "criticalFieldsWithoutEvidence": 0,
+        "expectedConflictFields": [],
+        "actualConflictFields": [],
+        "silentlyOverwrittenConflictCount": 0,
+        "expectedSourceFileCount": 2,
+        "actualSourceFileCount": 2,
+        "correctMergeCount": 1,
+        "duplicateProductCount": 0,
+        "wrongMergeCount": 0,
+        "unexpectedProductCount": 0,
+        "humanReviewExpected": 0,
+        "humanReviewActual": 0,
+        "humanReviewReasons": [],
+        "expectedWarningCodes": [],
+        "actualWarningCodes": [],
+        "missingExpectedWarningCodes": []
+      }
+    }
+  ],
+  "auditSummary": {
+    "eventCount": 26,
+    "note": "审计事件仅统计数量，完整Prompt、客户全文、Authorization和API Key未写入结果文件"
+  }
+}

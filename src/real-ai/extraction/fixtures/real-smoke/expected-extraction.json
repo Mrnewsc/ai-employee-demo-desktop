@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0",
+  "samples": [
+    {
+      "sampleId": "pdf-native",
+      "sampleType": "原生PDF单产品",
+      "sourcePaths": ["pdf/native-text/input.pdf"],
+      "products": [
+        {
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "specifications": {},
+          "quantity": { "value": 1, "unit": "套", "raw": "1套" },
+          "material": null,
+          "process": null,
+          "application": "metal parts coating",
+          "expectedHumanReview": false,
+          "expectedWarnings": []
+        }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 1
+    },
+    {
+      "sampleId": "pdf-multi-product",
+      "sampleType": "多产品PDF",
+      "sourcePaths": ["pdf/simple-table/input.pdf"],
+      "products": [
+        { "productName": "喷涂主机", "model": "SP-3000", "specifications": { "规格": "18.5kW" }, "quantity": { "value": 1, "unit": "套", "raw": "1套" }, "material": null, "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] },
+        { "productName": "输送模块", "model": "CV-1200", "specifications": { "规格": "1200mm" }, "quantity": { "value": 2, "unit": "套", "raw": "2套" }, "material": null, "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] },
+        { "productName": "控制系统", "model": "CTRL-A1", "specifications": { "规格": "PLC" }, "quantity": { "value": 1, "unit": "套", "raw": "1套" }, "material": null, "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 1
+    },
+    {
+      "sampleId": "excel-products",
+      "sampleType": "Excel产品清单",
+      "sourcePaths": ["excel/normal-products/input.xlsx"],
+      "products": [
+        { "productName": "自动喷涂设备", "model": "SP-3000", "specifications": { "规格": "18.5kW" }, "quantity": { "value": 1, "unit": null, "raw": "1" }, "material": "不锈钢", "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] },
+        { "productName": "输送模块", "model": "CV-1200", "specifications": { "规格": "1200mm" }, "quantity": { "value": 2, "unit": null, "raw": "2" }, "material": "碳钢", "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 1
+    },
+    {
+      "sampleId": "docx-request",
+      "sampleType": "DOCX采购需求",
+      "sourcePaths": ["docx/structured-content/input.docx"],
+      "products": [
+        { "productName": "自动喷涂设备", "model": "SP-3000", "specifications": { "日产量": "约3000件" }, "quantity": { "value": 1, "unit": "套", "raw": "1套" }, "material": "不锈钢", "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] },
+        { "productName": "输送模块", "model": "CV-1200", "specifications": {}, "quantity": { "value": 2, "unit": "套", "raw": "2套" }, "material": "碳钢", "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 1
+    },
+    {
+      "sampleId": "ocr-low-confidence-model",
+      "sampleType": "低质量OCR型号",
+      "sourcePaths": ["images/product-list/input.png"],
+      "products": [
+        { "productNameFromOcr": true, "modelFromOcr": true, "specificationsFromOcr": true, "quantityFromOcr": true, "materialFromOcr": true, "process": null, "application": null, "expectedHumanReview": true, "expectedWarnings": ["OCR_MODEL_UNCERTAIN"] }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 1
+    },
+    {
+      "sampleId": "ocr-nameplate-regression",
+      "sampleType": "OCR去重前后性能对照",
+      "sourcePaths": ["images/nameplate/input.jpg"],
+      "scoredFields": ["model"],
+      "products": [
+        { "productNameFromOcr": true, "modelFromOcr": true, "specifications": {}, "quantity": { "value": null, "unit": null, "raw": null }, "material": null, "process": null, "application": null, "expectedHumanReview": true, "expectedWarnings": ["OCR_MODEL_UNCERTAIN"] }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 1
+    },
+    {
+      "sampleId": "missing-fields",
+      "sampleType": "缺字段Excel",
+      "sourcePaths": ["extraction/fixtures/real-smoke/missing-fields.xlsx"],
+      "products": [
+        { "productName": "自动喷涂设备", "model": "SP-3000", "specifications": {}, "quantity": { "value": null, "unit": null, "raw": null }, "material": null, "process": null, "application": null, "expectedHumanReview": false, "expectedWarnings": [] }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 1
+    },
+    {
+      "sampleId": "conflicting-fields",
+      "sampleType": "跨文件型号与数量冲突",
+      "sourcePaths": ["extraction/fixtures/real-smoke/conflict-a.xlsx", "extraction/fixtures/real-smoke/conflict-b.xlsx"],
+      "products": [
+        { "productName": "自动喷涂设备", "model": "SP-3000", "specifications": {}, "quantity": { "value": 10, "unit": "套", "raw": "10套" }, "material": null, "process": null, "application": null, "expectedHumanReview": true, "expectedWarnings": ["FIELD_CONFLICT"] }
+      ],
+      "expectedConflictFields": ["model", "quantity"],
+      "expectedSourceFileCount": 2
+    },
+    {
+      "sampleId": "cross-file-merge",
+      "sampleType": "跨文件同产品合并",
+      "sourcePaths": ["pdf/native-text/input.pdf", "extraction/fixtures/real-smoke/merge-specs.xlsx"],
+      "products": [
+        { "productName": "自动喷涂设备", "model": "SP-3000", "specifications": { "规格": "18.5kW" }, "quantity": { "value": 1, "unit": "套", "raw": "1套" }, "material": null, "process": null, "application": "metal parts coating", "expectedHumanReview": false, "expectedWarnings": [] }
+      ],
+      "expectedConflictFields": [],
+      "expectedSourceFileCount": 2
+    }
+  ]
+}

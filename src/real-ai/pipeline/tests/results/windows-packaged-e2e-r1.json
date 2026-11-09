@@ -1,0 +1,1924 @@
+{
+  "schemaVersion": "1.0",
+  "reportId": "REAL-AI-001F-R1",
+  "appVersion": "0.1.0",
+  "packaged": true,
+  "passed": true,
+  "executedAt": "2026-08-10T07:17:21.668Z",
+  "cases": {
+    "foundation": {
+      "caseA": true,
+      "caseC": true,
+      "caseD": true,
+      "caseH": true
+    },
+    "ocr": {
+      "passed": true,
+      "originalModel": "9P-3000",
+      "candidateModel": "SP-3000",
+      "level": "low",
+      "evidence": true,
+      "needsHumanReview": true
+    },
+    "emptyCatalog": {
+      "passed": true,
+      "extractedProducts": 1,
+      "matchGroups": 0
+    },
+    "missingKey": {
+      "passed": true,
+      "errorCode": "AI_NOT_CONFIGURED"
+    },
+    "cancel": {
+      "passed": true,
+      "parsing": true,
+      "extracting": true
+    }
+  },
+  "caseRecords": {
+    "A": {
+      "caseId": "A",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "input.pdf"
+      ],
+      "startedAt": "2026-08-10T06:20:33.025Z",
+      "completedAt": "2026-08-10T06:20:45.596Z",
+      "result": "completed",
+      "failedStep": null,
+      "errorCode": null,
+      "extractedProducts": [
+        {
+          "id": "ext_049489af",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "needsHumanReview": false,
+          "evidenceSourceCount": 1
+        }
+      ],
+      "matchSummary": [
+        {
+          "extractedProductId": "ext_049489af",
+          "candidateProductId": "JG-SP-3000",
+          "candidateModel": "SP-3000",
+          "level": "exact",
+          "needsHumanReview": false,
+          "recallBasis": [
+            "型号 SP-3000 标准化后精确一致",
+            "名称与产品分类“自动喷涂设备”一致"
+          ],
+          "conflicts": []
+        }
+      ],
+      "humanDecisionSummary": "not-executed-cli",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 1,
+      "diagnostics": {
+        "schemaVersion": "1.0",
+        "attemptNumber": 1,
+        "jobId": "pipeline_52df47c5-a935-4442-b659-7fb8632e87f2",
+        "customerId": "customer-jinhua-001",
+        "status": "completed",
+        "stage": "complete",
+        "startedAt": "2026-08-10T06:20:33.026Z",
+        "completedAt": "2026-08-10T06:20:45.595Z",
+        "durationMs": 12569,
+        "files": [
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_40c7df5f-d846-48a6-9dbc-0005b3042846",
+            "safeFileName": "input.pdf",
+            "fileType": "pdf",
+            "parseStatus": "parsed",
+            "parseDurationMs": 380,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          }
+        ],
+        "extraction": {
+          "schemaVersion": "1.0",
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "extractionStartedAt": "2026-08-10T06:20:37.151Z",
+          "extractionDurationMs": 8415,
+          "requestCount": 1,
+          "retryCount": 0,
+          "repairCount": 0,
+          "errorCode": null,
+          "errorStage": null,
+          "providerHttpStatus": null,
+          "providerRequestId": null,
+          "timeoutMs": 60000,
+          "outputTruncated": false,
+          "schemaValid": true
+        },
+        "matching": {
+          "schemaVersion": "1.0",
+          "catalogVersion": 1,
+          "extractedProductCount": 1,
+          "matchGroupCount": 1,
+          "matchingDurationMs": 23,
+          "matchingErrorCode": null
+        },
+        "failureStage": null,
+        "failureCode": null,
+        "safeFailureMessage": null,
+        "statusHistory": [
+          {
+            "status": "queued",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:20:33.026Z"
+          },
+          {
+            "status": "staging",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:20:33.026Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T06:20:33.029Z"
+          },
+          {
+            "status": "extracting",
+            "stage": "extracting-products",
+            "timestamp": "2026-08-10T06:20:37.151Z"
+          },
+          {
+            "status": "matching",
+            "stage": "checking-catalog",
+            "timestamp": "2026-08-10T06:20:45.568Z"
+          },
+          {
+            "status": "matching",
+            "stage": "matching-products",
+            "timestamp": "2026-08-10T06:20:45.572Z"
+          },
+          {
+            "status": "completed",
+            "stage": "complete",
+            "timestamp": "2026-08-10T06:20:45.595Z"
+          }
+        ],
+        "previousAttempts": []
+      },
+      "automatedPipelinePassed": true
+    },
+    "C": {
+      "caseId": "C",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "case-c-exact.xlsx",
+        "case-c-conflict.xlsx",
+        "case-c-none.xlsx"
+      ],
+      "startedAt": "2026-08-10T06:34:05.201Z",
+      "completedAt": "2026-08-10T06:34:28.251Z",
+      "result": "completed",
+      "failedStep": null,
+      "errorCode": null,
+      "extractedProducts": [
+        {
+          "id": "ext_f44ccaba",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "needsHumanReview": false,
+          "evidenceSourceCount": 1
+        },
+        {
+          "id": "ext_d15a7faa",
+          "productName": "自动化生产线",
+          "model": "AL-2600",
+          "needsHumanReview": false,
+          "evidenceSourceCount": 1
+        },
+        {
+          "id": "ext_5c711f19",
+          "productName": "专用视觉检测台",
+          "model": "ZX-9999",
+          "needsHumanReview": true,
+          "evidenceSourceCount": 1
+        }
+      ],
+      "matchSummary": [
+        {
+          "extractedProductId": "ext_f44ccaba",
+          "candidateProductId": "JG-SP-3000",
+          "candidateModel": "SP-3000",
+          "level": "exact",
+          "needsHumanReview": false,
+          "recallBasis": [
+            "型号 SP-3000 标准化后精确一致",
+            "名称与产品分类“自动喷涂设备”一致",
+            "应用场景与产品库“五金配件”相关"
+          ],
+          "conflicts": []
+        },
+        {
+          "extractedProductId": "ext_d15a7faa",
+          "candidateProductId": "YW-AL-2600",
+          "candidateModel": "AL-2600",
+          "level": "medium",
+          "needsHumanReview": true,
+          "recallBasis": [
+            "型号 AL-2600 标准化后精确一致",
+            "名称与产品分类“自动化生产线”一致",
+            "应用场景与产品库“机械装配”相关"
+          ],
+          "conflicts": [
+            "工作宽度存在硬冲突：客户 2000mm，产品库 1200mm"
+          ]
+        },
+        {
+          "extractedProductId": "ext_5c711f19",
+          "candidateProductId": null,
+          "candidateModel": null,
+          "level": "none",
+          "needsHumanReview": true,
+          "recallBasis": [],
+          "conflicts": [
+            "企业产品库中未找到达到最低阈值的合理候选"
+          ]
+        }
+      ],
+      "humanDecisionSummary": "not-executed-cli",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 3,
+      "diagnostics": {
+        "schemaVersion": "1.0",
+        "attemptNumber": 1,
+        "jobId": "pipeline_ffbf56d8-11c7-49a4-b3df-3a59a57c7fd9",
+        "customerId": "customer-jinhua-001",
+        "status": "completed",
+        "stage": "complete",
+        "startedAt": "2026-08-10T06:34:05.202Z",
+        "completedAt": "2026-08-10T06:34:28.251Z",
+        "durationMs": 23049,
+        "files": [
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_5955eb11-14eb-4290-9952-9b962c5497c3",
+            "safeFileName": "case-c-exact.xlsx",
+            "fileType": "xlsx",
+            "parseStatus": "parsed",
+            "parseDurationMs": 8,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          },
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_be4dd988-09fb-4149-8d13-fb9dcc2b8324",
+            "safeFileName": "case-c-conflict.xlsx",
+            "fileType": "xlsx",
+            "parseStatus": "parsed",
+            "parseDurationMs": 3,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          },
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_3a6585dd-b545-4639-bfc5-131fc26b48b9",
+            "safeFileName": "case-c-none.xlsx",
+            "fileType": "xlsx",
+            "parseStatus": "parsed",
+            "parseDurationMs": 2,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          }
+        ],
+        "extraction": {
+          "schemaVersion": "1.0",
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "extractionStartedAt": "2026-08-10T06:34:05.750Z",
+          "extractionDurationMs": 22446,
+          "requestCount": 3,
+          "retryCount": 0,
+          "repairCount": 0,
+          "errorCode": null,
+          "errorStage": null,
+          "providerHttpStatus": null,
+          "providerRequestId": null,
+          "timeoutMs": 60000,
+          "outputTruncated": false,
+          "schemaValid": true
+        },
+        "matching": {
+          "schemaVersion": "1.0",
+          "catalogVersion": 1,
+          "extractedProductCount": 3,
+          "matchGroupCount": 3,
+          "matchingDurationMs": 49,
+          "matchingErrorCode": null
+        },
+        "failureStage": null,
+        "failureCode": null,
+        "safeFailureMessage": null,
+        "statusHistory": [
+          {
+            "status": "queued",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:34:05.202Z"
+          },
+          {
+            "status": "staging",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:34:05.202Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T06:34:05.215Z"
+          },
+          {
+            "status": "extracting",
+            "stage": "extracting-products",
+            "timestamp": "2026-08-10T06:34:05.750Z"
+          },
+          {
+            "status": "matching",
+            "stage": "checking-catalog",
+            "timestamp": "2026-08-10T06:34:28.198Z"
+          },
+          {
+            "status": "matching",
+            "stage": "matching-products",
+            "timestamp": "2026-08-10T06:34:28.202Z"
+          },
+          {
+            "status": "completed",
+            "stage": "complete",
+            "timestamp": "2026-08-10T06:34:28.251Z"
+          }
+        ],
+        "previousAttempts": []
+      },
+      "automatedPipelinePassed": true
+    },
+    "D": {
+      "caseId": "D",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "case-c-exact.xlsx",
+        "case-c-conflict.xlsx",
+        "case-c-none.xlsx"
+      ],
+      "startedAt": "2026-08-10T06:34:05.201Z",
+      "completedAt": "2026-08-10T06:34:28.251Z",
+      "result": "completed",
+      "failedStep": null,
+      "errorCode": null,
+      "extractedProducts": [
+        {
+          "id": "ext_f44ccaba",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "needsHumanReview": false,
+          "evidenceSourceCount": 1
+        },
+        {
+          "id": "ext_d15a7faa",
+          "productName": "自动化生产线",
+          "model": "AL-2600",
+          "needsHumanReview": false,
+          "evidenceSourceCount": 1
+        },
+        {
+          "id": "ext_5c711f19",
+          "productName": "专用视觉检测台",
+          "model": "ZX-9999",
+          "needsHumanReview": true,
+          "evidenceSourceCount": 1
+        }
+      ],
+      "matchSummary": [
+        {
+          "extractedProductId": "ext_f44ccaba",
+          "candidateProductId": "JG-SP-3000",
+          "candidateModel": "SP-3000",
+          "level": "exact",
+          "needsHumanReview": false,
+          "recallBasis": [
+            "型号 SP-3000 标准化后精确一致",
+            "名称与产品分类“自动喷涂设备”一致",
+            "应用场景与产品库“五金配件”相关"
+          ],
+          "conflicts": []
+        },
+        {
+          "extractedProductId": "ext_d15a7faa",
+          "candidateProductId": "YW-AL-2600",
+          "candidateModel": "AL-2600",
+          "level": "medium",
+          "needsHumanReview": true,
+          "recallBasis": [
+            "型号 AL-2600 标准化后精确一致",
+            "名称与产品分类“自动化生产线”一致",
+            "应用场景与产品库“机械装配”相关"
+          ],
+          "conflicts": [
+            "工作宽度存在硬冲突：客户 2000mm，产品库 1200mm"
+          ]
+        },
+        {
+          "extractedProductId": "ext_5c711f19",
+          "candidateProductId": null,
+          "candidateModel": null,
+          "level": "none",
+          "needsHumanReview": true,
+          "recallBasis": [],
+          "conflicts": [
+            "企业产品库中未找到达到最低阈值的合理候选"
+          ]
+        }
+      ],
+      "humanDecisionSummary": "not-executed-cli",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 3,
+      "diagnostics": {
+        "schemaVersion": "1.0",
+        "attemptNumber": 1,
+        "jobId": "pipeline_ffbf56d8-11c7-49a4-b3df-3a59a57c7fd9",
+        "customerId": "customer-jinhua-001",
+        "status": "completed",
+        "stage": "complete",
+        "startedAt": "2026-08-10T06:34:05.202Z",
+        "completedAt": "2026-08-10T06:34:28.251Z",
+        "durationMs": 23049,
+        "files": [
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_5955eb11-14eb-4290-9952-9b962c5497c3",
+            "safeFileName": "case-c-exact.xlsx",
+            "fileType": "xlsx",
+            "parseStatus": "parsed",
+            "parseDurationMs": 8,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          },
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_be4dd988-09fb-4149-8d13-fb9dcc2b8324",
+            "safeFileName": "case-c-conflict.xlsx",
+            "fileType": "xlsx",
+            "parseStatus": "parsed",
+            "parseDurationMs": 3,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          },
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_3a6585dd-b545-4639-bfc5-131fc26b48b9",
+            "safeFileName": "case-c-none.xlsx",
+            "fileType": "xlsx",
+            "parseStatus": "parsed",
+            "parseDurationMs": 2,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          }
+        ],
+        "extraction": {
+          "schemaVersion": "1.0",
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "extractionStartedAt": "2026-08-10T06:34:05.750Z",
+          "extractionDurationMs": 22446,
+          "requestCount": 3,
+          "retryCount": 0,
+          "repairCount": 0,
+          "errorCode": null,
+          "errorStage": null,
+          "providerHttpStatus": null,
+          "providerRequestId": null,
+          "timeoutMs": 60000,
+          "outputTruncated": false,
+          "schemaValid": true
+        },
+        "matching": {
+          "schemaVersion": "1.0",
+          "catalogVersion": 1,
+          "extractedProductCount": 3,
+          "matchGroupCount": 3,
+          "matchingDurationMs": 49,
+          "matchingErrorCode": null
+        },
+        "failureStage": null,
+        "failureCode": null,
+        "safeFailureMessage": null,
+        "statusHistory": [
+          {
+            "status": "queued",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:34:05.202Z"
+          },
+          {
+            "status": "staging",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:34:05.202Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T06:34:05.215Z"
+          },
+          {
+            "status": "extracting",
+            "stage": "extracting-products",
+            "timestamp": "2026-08-10T06:34:05.750Z"
+          },
+          {
+            "status": "matching",
+            "stage": "checking-catalog",
+            "timestamp": "2026-08-10T06:34:28.198Z"
+          },
+          {
+            "status": "matching",
+            "stage": "matching-products",
+            "timestamp": "2026-08-10T06:34:28.202Z"
+          },
+          {
+            "status": "completed",
+            "stage": "complete",
+            "timestamp": "2026-08-10T06:34:28.251Z"
+          }
+        ],
+        "previousAttempts": []
+      },
+      "automatedPipelinePassed": true
+    },
+    "H": {
+      "caseId": "H",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "input.pdf",
+        "case-h-same-product.xlsx"
+      ],
+      "startedAt": "2026-08-10T06:31:35.364Z",
+      "completedAt": "2026-08-10T06:31:46.139Z",
+      "result": "completed",
+      "failedStep": null,
+      "errorCode": null,
+      "extractedProducts": [
+        {
+          "id": "ext_8e6b85ce",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "needsHumanReview": false,
+          "evidenceSourceCount": 2
+        }
+      ],
+      "matchSummary": [
+        {
+          "extractedProductId": "ext_8e6b85ce",
+          "candidateProductId": "JG-SP-3000",
+          "candidateModel": "SP-3000",
+          "level": "exact",
+          "needsHumanReview": false,
+          "recallBasis": [
+            "型号 SP-3000 标准化后精确一致",
+            "名称与产品分类“自动喷涂设备”一致"
+          ],
+          "conflicts": []
+        }
+      ],
+      "humanDecisionSummary": "not-executed-cli",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 2,
+      "diagnostics": {
+        "schemaVersion": "1.0",
+        "attemptNumber": 1,
+        "jobId": "pipeline_8473e7e4-b803-45da-9463-cbdf21c795e4",
+        "customerId": "customer-jinhua-001",
+        "status": "completed",
+        "stage": "complete",
+        "startedAt": "2026-08-10T06:31:35.364Z",
+        "completedAt": "2026-08-10T06:31:46.139Z",
+        "durationMs": 10775,
+        "files": [
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_150007e5-0941-431c-a636-4d101c7c2651",
+            "safeFileName": "input.pdf",
+            "fileType": "pdf",
+            "parseStatus": "parsed",
+            "parseDurationMs": 95,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          },
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_b74b47b1-5277-4e7a-b6a4-d410a4bb32ec",
+            "safeFileName": "case-h-same-product.xlsx",
+            "fileType": "xlsx",
+            "parseStatus": "parsed",
+            "parseDurationMs": 10,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          }
+        ],
+        "extraction": {
+          "schemaVersion": "1.0",
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "extractionStartedAt": "2026-08-10T06:31:35.870Z",
+          "extractionDurationMs": 10233,
+          "requestCount": 2,
+          "retryCount": 0,
+          "repairCount": 0,
+          "errorCode": null,
+          "errorStage": null,
+          "providerHttpStatus": null,
+          "providerRequestId": null,
+          "timeoutMs": 60000,
+          "outputTruncated": false,
+          "schemaValid": true
+        },
+        "matching": {
+          "schemaVersion": "1.0",
+          "catalogVersion": 1,
+          "extractedProductCount": 1,
+          "matchGroupCount": 1,
+          "matchingDurationMs": 27,
+          "matchingErrorCode": null
+        },
+        "failureStage": null,
+        "failureCode": null,
+        "safeFailureMessage": null,
+        "statusHistory": [
+          {
+            "status": "queued",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:31:35.364Z"
+          },
+          {
+            "status": "staging",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:31:35.364Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T06:31:35.368Z"
+          },
+          {
+            "status": "extracting",
+            "stage": "extracting-products",
+            "timestamp": "2026-08-10T06:31:35.870Z"
+          },
+          {
+            "status": "matching",
+            "stage": "checking-catalog",
+            "timestamp": "2026-08-10T06:31:46.106Z"
+          },
+          {
+            "status": "matching",
+            "stage": "matching-products",
+            "timestamp": "2026-08-10T06:31:46.112Z"
+          },
+          {
+            "status": "completed",
+            "stage": "complete",
+            "timestamp": "2026-08-10T06:31:46.139Z"
+          }
+        ],
+        "previousAttempts": []
+      },
+      "automatedPipelinePassed": true,
+      "mergedProductId": "ext_8e6b85ce",
+      "evidenceSources": [
+        "input.pdf:pdf",
+        "case-h-same-product.xlsx:sheet"
+      ]
+    },
+    "B": {
+      "caseId": "B",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "input.png"
+      ],
+      "startedAt": "2026-08-10T07:17:06.420Z",
+      "completedAt": "2026-08-10T07:17:21.668Z",
+      "result": "completed",
+      "failedStep": null,
+      "errorCode": null,
+      "extractedProducts": [
+        {
+          "id": "ext_15bd05e5",
+          "productName": "自动 喷涂 设备",
+          "model": "9P-3000",
+          "needsHumanReview": true,
+          "evidenceSourceCount": 1
+        }
+      ],
+      "matchSummary": [
+        {
+          "extractedProductId": "ext_15bd05e5",
+          "candidateProductId": "JG-SP-3000",
+          "candidateModel": "SP-3000",
+          "level": "low",
+          "needsHumanReview": true,
+          "recallBasis": [
+            "名称与产品分类“自动喷涂设备”一致",
+            "产能匹配：客户 3000 件 /天，产品库 3000件/天"
+          ],
+          "conflicts": [
+            "客户型号 9P-3000 与候选型号 SP-3000 不一致",
+            "材质格式不可安全比较：客户 不 锈 钢，产品库 碳钢"
+          ]
+        }
+      ],
+      "humanDecisionSummary": "not-executed-cli",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 1,
+      "diagnostics": {
+        "schemaVersion": "1.0",
+        "attemptNumber": 1,
+        "jobId": "pipeline_d84c00ad-9615-4d42-a6fd-4408c9df57cf",
+        "customerId": "customer-jinhua-001",
+        "status": "completed",
+        "stage": "complete",
+        "startedAt": "2026-08-10T07:17:06.421Z",
+        "completedAt": "2026-08-10T07:17:21.668Z",
+        "durationMs": 15247,
+        "files": [
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_0b51e3b9-5213-40ab-84bb-43082af66ff5",
+            "safeFileName": "input.png",
+            "fileType": "image",
+            "parseStatus": "parsed",
+            "parseDurationMs": 647,
+            "ocrUsed": true,
+            "ocrWarningCodes": [
+              "ocr_character_ambiguity"
+            ]
+          }
+        ],
+        "extraction": {
+          "schemaVersion": "1.0",
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "extractionStartedAt": "2026-08-10T07:17:07.577Z",
+          "extractionDurationMs": 14050,
+          "requestCount": 1,
+          "retryCount": 0,
+          "repairCount": 0,
+          "errorCode": null,
+          "errorStage": null,
+          "providerHttpStatus": null,
+          "providerRequestId": null,
+          "timeoutMs": 60000,
+          "outputTruncated": false,
+          "schemaValid": true
+        },
+        "matching": {
+          "schemaVersion": "1.0",
+          "catalogVersion": 1,
+          "extractedProductCount": 1,
+          "matchGroupCount": 1,
+          "matchingDurationMs": 34,
+          "matchingErrorCode": null
+        },
+        "failureStage": null,
+        "failureCode": null,
+        "safeFailureMessage": null,
+        "statusHistory": [
+          {
+            "status": "queued",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T07:17:06.420Z"
+          },
+          {
+            "status": "staging",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T07:17:06.421Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T07:17:06.425Z"
+          },
+          {
+            "status": "ocr",
+            "stage": "recognizing-text",
+            "timestamp": "2026-08-10T07:17:07.350Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T07:17:07.553Z"
+          },
+          {
+            "status": "extracting",
+            "stage": "extracting-products",
+            "timestamp": "2026-08-10T07:17:07.577Z"
+          },
+          {
+            "status": "matching",
+            "stage": "checking-catalog",
+            "timestamp": "2026-08-10T07:17:21.629Z"
+          },
+          {
+            "status": "matching",
+            "stage": "matching-products",
+            "timestamp": "2026-08-10T07:17:21.634Z"
+          },
+          {
+            "status": "completed",
+            "stage": "complete",
+            "timestamp": "2026-08-10T07:17:21.668Z"
+          }
+        ],
+        "previousAttempts": []
+      },
+      "automatedPipelinePassed": true,
+      "originalModel": "9P-3000",
+      "candidateModel": "SP-3000",
+      "candidateLevel": "low",
+      "candidateRecallBasis": [
+        "name:名称与产品分类“自动喷涂设备”一致",
+        "specification:产能匹配：客户 3000 件 /天，产品库 3000件/天"
+      ],
+      "illegalModelGuess": false
+    },
+    "E": {
+      "caseId": "E",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "input.pdf"
+      ],
+      "startedAt": "2026-08-10T06:38:30.825Z",
+      "completedAt": "2026-08-10T06:38:37.257Z",
+      "result": "catalog-required",
+      "failedStep": null,
+      "errorCode": "CATALOG_NOT_CONFIGURED",
+      "extractedProducts": [
+        {
+          "id": "ext_41dab56e",
+          "productName": "自动喷涂设备",
+          "model": "SP-3000",
+          "needsHumanReview": false,
+          "evidenceSourceCount": 1
+        }
+      ],
+      "matchSummary": [],
+      "humanDecisionSummary": "not-executed-cli",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 1,
+      "diagnostics": {
+        "schemaVersion": "1.0",
+        "attemptNumber": 1,
+        "jobId": "pipeline_04940535-d78f-4849-aff6-3c9262aed830",
+        "customerId": "customer-jinhua-001",
+        "status": "catalog-required",
+        "stage": "awaiting-catalog",
+        "startedAt": "2026-08-10T06:38:30.826Z",
+        "completedAt": "2026-08-10T06:38:37.257Z",
+        "durationMs": 6431,
+        "files": [
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_89188b1b-93ad-4076-8aa0-67218b899b7e",
+            "safeFileName": "input.pdf",
+            "fileType": "pdf",
+            "parseStatus": "parsed",
+            "parseDurationMs": 93,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          }
+        ],
+        "extraction": {
+          "schemaVersion": "1.0",
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "extractionStartedAt": "2026-08-10T06:38:31.361Z",
+          "extractionDurationMs": 5890,
+          "requestCount": 1,
+          "retryCount": 0,
+          "repairCount": 0,
+          "errorCode": null,
+          "errorStage": null,
+          "providerHttpStatus": null,
+          "providerRequestId": null,
+          "timeoutMs": 60000,
+          "outputTruncated": false,
+          "schemaValid": true
+        },
+        "matching": {
+          "schemaVersion": "1.0",
+          "catalogVersion": null,
+          "extractedProductCount": 1,
+          "matchGroupCount": 0,
+          "matchingDurationMs": null,
+          "matchingErrorCode": null
+        },
+        "failureStage": null,
+        "failureCode": null,
+        "safeFailureMessage": null,
+        "statusHistory": [
+          {
+            "status": "queued",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:38:30.825Z"
+          },
+          {
+            "status": "staging",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:38:30.826Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T06:38:30.829Z"
+          },
+          {
+            "status": "extracting",
+            "stage": "extracting-products",
+            "timestamp": "2026-08-10T06:38:31.361Z"
+          },
+          {
+            "status": "matching",
+            "stage": "checking-catalog",
+            "timestamp": "2026-08-10T06:38:37.254Z"
+          },
+          {
+            "status": "catalog-required",
+            "stage": "awaiting-catalog",
+            "timestamp": "2026-08-10T06:38:37.257Z"
+          }
+        ],
+        "previousAttempts": []
+      },
+      "automatedPipelinePassed": true,
+      "demoCandidateInjected": false
+    },
+    "F": {
+      "caseId": "F",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "input.pdf"
+      ],
+      "startedAt": "2026-08-10T06:39:02.530Z",
+      "completedAt": "2026-08-10T06:39:03.063Z",
+      "result": "failed",
+      "failedStep": null,
+      "errorCode": "AI_NOT_CONFIGURED",
+      "extractedProducts": [],
+      "matchSummary": [],
+      "humanDecisionSummary": "not-executed-cli",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 0,
+      "diagnostics": {
+        "schemaVersion": "1.0",
+        "attemptNumber": 1,
+        "jobId": "pipeline_f2277c8f-b8ea-4d0c-9008-1c71e159ec20",
+        "customerId": "customer-jinhua-001",
+        "status": "failed",
+        "stage": "failed",
+        "startedAt": "2026-08-10T06:39:02.531Z",
+        "completedAt": "2026-08-10T06:39:03.063Z",
+        "durationMs": 532,
+        "files": [
+          {
+            "schemaVersion": "1.0",
+            "fileId": "file_bd301754-9024-4008-8da4-ba5911fa1fe8",
+            "safeFileName": "input.pdf",
+            "fileType": "pdf",
+            "parseStatus": "parsed",
+            "parseDurationMs": 92,
+            "ocrUsed": false,
+            "ocrWarningCodes": []
+          }
+        ],
+        "extraction": {
+          "schemaVersion": "1.0",
+          "provider": null,
+          "model": null,
+          "extractionStartedAt": "2026-08-10T06:39:03.063Z",
+          "extractionDurationMs": 0,
+          "requestCount": 0,
+          "retryCount": 0,
+          "repairCount": 0,
+          "errorCode": "AI_NOT_CONFIGURED",
+          "errorStage": "extracting-products",
+          "providerHttpStatus": null,
+          "providerRequestId": null,
+          "timeoutMs": null,
+          "outputTruncated": false,
+          "schemaValid": false
+        },
+        "matching": {
+          "schemaVersion": "1.0",
+          "catalogVersion": null,
+          "extractedProductCount": 0,
+          "matchGroupCount": 0,
+          "matchingDurationMs": null,
+          "matchingErrorCode": null
+        },
+        "failureStage": "extracting-products",
+        "failureCode": "AI_NOT_CONFIGURED",
+        "safeFailureMessage": "AI分析服务尚未配置，请设置DEEPSEEK_API_KEY和DEEPSEEK_MODEL后重试",
+        "statusHistory": [
+          {
+            "status": "queued",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:39:02.530Z"
+          },
+          {
+            "status": "staging",
+            "stage": "receiving-files",
+            "timestamp": "2026-08-10T06:39:02.531Z"
+          },
+          {
+            "status": "parsing",
+            "stage": "reading-files",
+            "timestamp": "2026-08-10T06:39:02.534Z"
+          },
+          {
+            "status": "extracting",
+            "stage": "extracting-products",
+            "timestamp": "2026-08-10T06:39:03.063Z"
+          },
+          {
+            "status": "failed",
+            "stage": "failed",
+            "timestamp": "2026-08-10T06:39:03.063Z"
+          }
+        ],
+        "previousAttempts": []
+      },
+      "automatedPipelinePassed": true,
+      "demoResultInjected": false
+    },
+    "G": {
+      "caseId": "G",
+      "appVersion": "0.1.0",
+      "packaged": true,
+      "customerId": "customer-jinhua-001",
+      "inputFixtures": [
+        "input.png",
+        "input.pdf"
+      ],
+      "startedAt": "2026-08-10T06:39:20.582Z",
+      "completedAt": "2026-08-10T06:39:22.354Z",
+      "result": "cancelled-stable",
+      "failedStep": null,
+      "errorCode": null,
+      "extractedProducts": [],
+      "matchSummary": [],
+      "humanDecisionSummary": "not-applicable",
+      "quoteDraftCreated": false,
+      "evidenceSourceCount": 0,
+      "automatedPipelinePassed": true,
+      "parsingCancel": {
+        "requested": true,
+        "terminal": "cancelled",
+        "stableAfterDelay": "cancelled",
+        "diagnostics": {
+          "schemaVersion": "1.0",
+          "attemptNumber": 1,
+          "jobId": "pipeline_e3acde64-6aab-43bd-975c-d2ad8a81002c",
+          "customerId": "customer-jinhua-001",
+          "status": "cancelled",
+          "stage": "cancelled",
+          "startedAt": "2026-08-10T06:39:20.582Z",
+          "completedAt": "2026-08-10T06:39:21.375Z",
+          "durationMs": 793,
+          "files": [
+            {
+              "schemaVersion": "1.0",
+              "fileId": "file_dc727dd4-64bb-4bbb-84ea-c5a611070c19",
+              "safeFileName": "input.png",
+              "fileType": "image",
+              "parseStatus": "reading",
+              "parseDurationMs": null,
+              "ocrUsed": false,
+              "ocrWarningCodes": []
+            }
+          ],
+          "extraction": {
+            "schemaVersion": "1.0",
+            "provider": null,
+            "model": null,
+            "extractionStartedAt": null,
+            "extractionDurationMs": null,
+            "requestCount": 0,
+            "retryCount": 0,
+            "repairCount": 0,
+            "errorCode": null,
+            "errorStage": null,
+            "providerHttpStatus": null,
+            "providerRequestId": null,
+            "timeoutMs": null,
+            "outputTruncated": false,
+            "schemaValid": null
+          },
+          "matching": {
+            "schemaVersion": "1.0",
+            "catalogVersion": null,
+            "extractedProductCount": 0,
+            "matchGroupCount": 0,
+            "matchingDurationMs": null,
+            "matchingErrorCode": null
+          },
+          "failureStage": "cancelled",
+          "failureCode": "JOB_CANCELLED",
+          "safeFailureMessage": "分析任务已取消",
+          "statusHistory": [
+            {
+              "status": "queued",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:39:20.582Z"
+            },
+            {
+              "status": "staging",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:39:20.582Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T06:39:20.585Z"
+            },
+            {
+              "status": "ocr",
+              "stage": "recognizing-text",
+              "timestamp": "2026-08-10T06:39:21.346Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T06:39:21.374Z"
+            },
+            {
+              "status": "cancelled",
+              "stage": "cancelled",
+              "timestamp": "2026-08-10T06:39:21.375Z"
+            }
+          ],
+          "previousAttempts": []
+        }
+      },
+      "extractingCancel": {
+        "requested": true,
+        "terminal": "cancelled",
+        "stableAfterDelay": "cancelled",
+        "diagnostics": {
+          "schemaVersion": "1.0",
+          "attemptNumber": 1,
+          "jobId": "pipeline_a67c0dae-8b98-46c3-81df-0f6d0f773d6b",
+          "customerId": "customer-jinhua-001",
+          "status": "cancelled",
+          "stage": "cancelled",
+          "startedAt": "2026-08-10T06:39:21.646Z",
+          "completedAt": "2026-08-10T06:39:22.090Z",
+          "durationMs": 444,
+          "files": [
+            {
+              "schemaVersion": "1.0",
+              "fileId": "file_472ae6f3-a7ab-4b3d-86e7-e6598f8d0eff",
+              "safeFileName": "input.pdf",
+              "fileType": "pdf",
+              "parseStatus": "parsed",
+              "parseDurationMs": 86,
+              "ocrUsed": false,
+              "ocrWarningCodes": []
+            }
+          ],
+          "extraction": {
+            "schemaVersion": "1.0",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "extractionStartedAt": "2026-08-10T06:39:22.090Z",
+            "extractionDurationMs": null,
+            "requestCount": 0,
+            "retryCount": 0,
+            "repairCount": 0,
+            "errorCode": null,
+            "errorStage": null,
+            "providerHttpStatus": null,
+            "providerRequestId": null,
+            "timeoutMs": 60000,
+            "outputTruncated": false,
+            "schemaValid": null
+          },
+          "matching": {
+            "schemaVersion": "1.0",
+            "catalogVersion": null,
+            "extractedProductCount": 0,
+            "matchGroupCount": 0,
+            "matchingDurationMs": null,
+            "matchingErrorCode": null
+          },
+          "failureStage": "cancelled",
+          "failureCode": "JOB_CANCELLED",
+          "safeFailureMessage": "分析任务已取消",
+          "statusHistory": [
+            {
+              "status": "queued",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:39:21.646Z"
+            },
+            {
+              "status": "staging",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:39:21.646Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T06:39:21.649Z"
+            },
+            {
+              "status": "extracting",
+              "stage": "extracting-products",
+              "timestamp": "2026-08-10T06:39:22.090Z"
+            },
+            {
+              "status": "cancelled",
+              "stage": "cancelled",
+              "timestamp": "2026-08-10T06:39:22.091Z"
+            }
+          ],
+          "previousAttempts": []
+        }
+      }
+    }
+  },
+  "statusHistory": [
+    "A:queued",
+    "A:staging",
+    "A:parsing",
+    "A:extracting",
+    "A:matching",
+    "A:completed",
+    "C-D-H:queued",
+    "C-D-H:staging",
+    "C-D-H:parsing",
+    "C-D-H:extracting",
+    "C-D-H:cancelled",
+    "C-D-H:matching",
+    "C-D-H:completed",
+    "C-D-H:failed",
+    "C-D:queued",
+    "C-D:staging",
+    "C-D:parsing",
+    "C-D:extracting",
+    "C-D:failed",
+    "H:queued",
+    "H:staging",
+    "H:parsing",
+    "H:extracting",
+    "H:matching",
+    "H:completed",
+    "C-D:matching",
+    "C-D:completed",
+    "B:queued",
+    "B:staging",
+    "B:parsing",
+    "B:ocr",
+    "B:extracting",
+    "B:failed",
+    "B:matching",
+    "B:completed",
+    "E:queued",
+    "E:staging",
+    "E:parsing",
+    "E:extracting",
+    "E:matching",
+    "E:catalog-required",
+    "F:queued",
+    "F:staging",
+    "F:parsing",
+    "F:extracting",
+    "F:failed",
+    "G-ocr:staging",
+    "G-ocr:parsing",
+    "G-ocr:ocr",
+    "G-ocr:cancelled",
+    "G-extracting:staging",
+    "G-extracting:parsing",
+    "G-extracting:extracting",
+    "G-extracting:cancelled"
+  ],
+  "catalog": {
+    "importedProducts": 24,
+    "version": 1
+  },
+  "caseHistory": {
+    "B": [
+      {
+        "caseId": "B",
+        "appVersion": "0.1.0",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "inputFixtures": [
+          "input.png"
+        ],
+        "startedAt": "2026-08-10T06:34:53.855Z",
+        "completedAt": "2026-08-10T06:35:26.659Z",
+        "result": "failed",
+        "failedStep": "ocr-extract-candidate-recall",
+        "errorCode": "AI_OUTPUT_TRUNCATED",
+        "extractedProducts": [],
+        "matchSummary": [],
+        "humanDecisionSummary": "not-executed-cli",
+        "quoteDraftCreated": false,
+        "evidenceSourceCount": 0,
+        "diagnostics": {
+          "schemaVersion": "1.0",
+          "attemptNumber": 1,
+          "jobId": "pipeline_1fcf8289-f87e-4e8f-9adb-69faf0381754",
+          "customerId": "customer-jinhua-001",
+          "status": "failed",
+          "stage": "failed",
+          "startedAt": "2026-08-10T06:34:53.856Z",
+          "completedAt": "2026-08-10T06:35:26.659Z",
+          "durationMs": 32803,
+          "files": [
+            {
+              "schemaVersion": "1.0",
+              "fileId": "file_d1a035d8-e96f-48fa-b6b7-5aa70bd2ca8b",
+              "safeFileName": "input.png",
+              "fileType": "image",
+              "parseStatus": "parsed",
+              "parseDurationMs": 582,
+              "ocrUsed": true,
+              "ocrWarningCodes": [
+                "ocr_character_ambiguity"
+              ]
+            }
+          ],
+          "extraction": {
+            "schemaVersion": "1.0",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "extractionStartedAt": "2026-08-10T06:34:54.916Z",
+            "extractionDurationMs": 31743,
+            "requestCount": 1,
+            "retryCount": 0,
+            "repairCount": 0,
+            "errorCode": "AI_OUTPUT_TRUNCATED",
+            "errorStage": "extracting-products",
+            "providerHttpStatus": null,
+            "providerRequestId": null,
+            "timeoutMs": 60000,
+            "outputTruncated": true,
+            "schemaValid": false
+          },
+          "matching": {
+            "schemaVersion": "1.0",
+            "catalogVersion": null,
+            "extractedProductCount": 0,
+            "matchGroupCount": 0,
+            "matchingDurationMs": null,
+            "matchingErrorCode": null
+          },
+          "failureStage": "extracting-products",
+          "failureCode": "AI_OUTPUT_TRUNCATED",
+          "safeFailureMessage": "DeepSeek输出因长度限制被截断",
+          "statusHistory": [
+            {
+              "status": "queued",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:34:53.856Z"
+            },
+            {
+              "status": "staging",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:34:53.856Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T06:34:53.861Z"
+            },
+            {
+              "status": "ocr",
+              "stage": "recognizing-text",
+              "timestamp": "2026-08-10T06:34:54.730Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T06:34:54.904Z"
+            },
+            {
+              "status": "extracting",
+              "stage": "extracting-products",
+              "timestamp": "2026-08-10T06:34:54.916Z"
+            },
+            {
+              "status": "failed",
+              "stage": "failed",
+              "timestamp": "2026-08-10T06:35:26.659Z"
+            }
+          ],
+          "previousAttempts": []
+        },
+        "automatedPipelinePassed": false,
+        "originalModel": null,
+        "candidateModel": null,
+        "candidateLevel": null,
+        "candidateRecallBasis": [],
+        "illegalModelGuess": false
+      },
+      {
+        "caseId": "B",
+        "appVersion": "0.1.0",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "inputFixtures": [
+          "input.png"
+        ],
+        "startedAt": "2026-08-10T06:37:27.219Z",
+        "completedAt": "2026-08-10T06:37:58.209Z",
+        "result": "completed",
+        "failedStep": null,
+        "errorCode": null,
+        "extractedProducts": [
+          {
+            "id": "ext_4dc7dc59",
+            "productName": "自动 喷涂 设备",
+            "model": "9P-3000",
+            "needsHumanReview": true,
+            "evidenceSourceCount": 1
+          }
+        ],
+        "matchSummary": [
+          {
+            "extractedProductId": "ext_4dc7dc59",
+            "candidateProductId": "JG-SP-3000",
+            "candidateModel": "SP-3000",
+            "level": "low",
+            "needsHumanReview": true,
+            "recallBasis": [
+              "名称与产品分类“自动喷涂设备”一致",
+              "产能匹配：客户 3000 件 /天，产品库 3000件/天"
+            ],
+            "conflicts": [
+              "客户型号 9P-3000 与候选型号 SP-3000 不一致",
+              "材质格式不可安全比较：客户 不 锈 钢，产品库 碳钢"
+            ]
+          }
+        ],
+        "humanDecisionSummary": "not-executed-cli",
+        "quoteDraftCreated": false,
+        "evidenceSourceCount": 1,
+        "diagnostics": {
+          "schemaVersion": "1.0",
+          "attemptNumber": 1,
+          "jobId": "pipeline_6c547dc4-0c8d-488e-b0ea-ac491d9f3d54",
+          "customerId": "customer-jinhua-001",
+          "status": "completed",
+          "stage": "complete",
+          "startedAt": "2026-08-10T06:37:27.220Z",
+          "completedAt": "2026-08-10T06:37:58.208Z",
+          "durationMs": 30988,
+          "files": [
+            {
+              "schemaVersion": "1.0",
+              "fileId": "file_7eefb67c-8c74-471f-a2ce-85aa4a5b93ab",
+              "safeFileName": "input.png",
+              "fileType": "image",
+              "parseStatus": "parsed",
+              "parseDurationMs": 580,
+              "ocrUsed": true,
+              "ocrWarningCodes": [
+                "ocr_character_ambiguity"
+              ]
+            }
+          ],
+          "extraction": {
+            "schemaVersion": "1.0",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "extractionStartedAt": "2026-08-10T06:37:28.328Z",
+            "extractionDurationMs": 29844,
+            "requestCount": 1,
+            "retryCount": 0,
+            "repairCount": 0,
+            "errorCode": null,
+            "errorStage": null,
+            "providerHttpStatus": null,
+            "providerRequestId": null,
+            "timeoutMs": 60000,
+            "outputTruncated": false,
+            "schemaValid": true
+          },
+          "matching": {
+            "schemaVersion": "1.0",
+            "catalogVersion": 1,
+            "extractedProductCount": 1,
+            "matchGroupCount": 1,
+            "matchingDurationMs": 29,
+            "matchingErrorCode": null
+          },
+          "failureStage": null,
+          "failureCode": null,
+          "safeFailureMessage": null,
+          "statusHistory": [
+            {
+              "status": "queued",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:37:27.220Z"
+            },
+            {
+              "status": "staging",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T06:37:27.220Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T06:37:27.225Z"
+            },
+            {
+              "status": "ocr",
+              "stage": "recognizing-text",
+              "timestamp": "2026-08-10T06:37:28.134Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T06:37:28.315Z"
+            },
+            {
+              "status": "extracting",
+              "stage": "extracting-products",
+              "timestamp": "2026-08-10T06:37:28.328Z"
+            },
+            {
+              "status": "matching",
+              "stage": "checking-catalog",
+              "timestamp": "2026-08-10T06:37:58.175Z"
+            },
+            {
+              "status": "matching",
+              "stage": "matching-products",
+              "timestamp": "2026-08-10T06:37:58.179Z"
+            },
+            {
+              "status": "completed",
+              "stage": "complete",
+              "timestamp": "2026-08-10T06:37:58.208Z"
+            }
+          ],
+          "previousAttempts": []
+        },
+        "automatedPipelinePassed": true,
+        "originalModel": "9P-3000",
+        "candidateModel": "SP-3000",
+        "candidateLevel": "low",
+        "candidateRecallBasis": [
+          "name:名称与产品分类“自动喷涂设备”一致",
+          "specification:产能匹配：客户 3000 件 /天，产品库 3000件/天"
+        ],
+        "illegalModelGuess": false
+      },
+      {
+        "caseId": "B",
+        "appVersion": "0.1.0",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "inputFixtures": [
+          "input.png"
+        ],
+        "startedAt": "2026-08-10T07:16:02.062Z",
+        "completedAt": "2026-08-10T07:16:19.416Z",
+        "result": "failed",
+        "failedStep": "ocr-extract-candidate-recall",
+        "errorCode": "AI_SCHEMA_INVALID",
+        "extractedProducts": [],
+        "matchSummary": [],
+        "humanDecisionSummary": "not-executed-cli",
+        "quoteDraftCreated": false,
+        "evidenceSourceCount": 0,
+        "diagnostics": {
+          "schemaVersion": "1.0",
+          "attemptNumber": 1,
+          "jobId": "pipeline_4aef0249-518a-4796-a68c-1c4595ea093c",
+          "customerId": "customer-jinhua-001",
+          "status": "failed",
+          "stage": "failed",
+          "startedAt": "2026-08-10T07:16:02.063Z",
+          "completedAt": "2026-08-10T07:16:19.416Z",
+          "durationMs": 17353,
+          "files": [
+            {
+              "schemaVersion": "1.0",
+              "fileId": "file_3460f1bb-6edb-45dd-9a64-c8d2faa7f758",
+              "safeFileName": "input.png",
+              "fileType": "image",
+              "parseStatus": "parsed",
+              "parseDurationMs": 650,
+              "ocrUsed": true,
+              "ocrWarningCodes": [
+                "ocr_character_ambiguity"
+              ]
+            }
+          ],
+          "extraction": {
+            "schemaVersion": "1.0",
+            "provider": "deepseek",
+            "model": "deepseek-v4-flash",
+            "extractionStartedAt": "2026-08-10T07:16:03.212Z",
+            "extractionDurationMs": 16203,
+            "requestCount": 2,
+            "retryCount": 0,
+            "repairCount": 1,
+            "errorCode": "AI_SCHEMA_INVALID",
+            "errorStage": "extracting-products",
+            "providerHttpStatus": null,
+            "providerRequestId": null,
+            "timeoutMs": 60000,
+            "outputTruncated": false,
+            "schemaValid": false
+          },
+          "matching": {
+            "schemaVersion": "1.0",
+            "catalogVersion": null,
+            "extractedProductCount": 0,
+            "matchGroupCount": 0,
+            "matchingDurationMs": null,
+            "matchingErrorCode": null
+          },
+          "failureStage": "extracting-products",
+          "failureCode": "AI_SCHEMA_INVALID",
+          "safeFailureMessage": "AI返回结果不符合产品提取Schema | [\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"products\",\n      0,\n      \"specifications\",\n      \"产能\"\n    ],\n    \"message\": \"Invalid input: expected string, received object\"\n  }\n]",
+          "statusHistory": [
+            {
+              "status": "queued",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T07:16:02.063Z"
+            },
+            {
+              "status": "staging",
+              "stage": "receiving-files",
+              "timestamp": "2026-08-10T07:16:02.063Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T07:16:02.068Z"
+            },
+            {
+              "status": "ocr",
+              "stage": "recognizing-text",
+              "timestamp": "2026-08-10T07:16:03.015Z"
+            },
+            {
+              "status": "parsing",
+              "stage": "reading-files",
+              "timestamp": "2026-08-10T07:16:03.202Z"
+            },
+            {
+              "status": "extracting",
+              "stage": "extracting-products",
+              "timestamp": "2026-08-10T07:16:03.212Z"
+            },
+            {
+              "status": "failed",
+              "stage": "failed",
+              "timestamp": "2026-08-10T07:16:19.416Z"
+            }
+          ],
+          "previousAttempts": []
+        },
+        "automatedPipelinePassed": false,
+        "originalModel": null,
+        "candidateModel": null,
+        "candidateLevel": null,
+        "candidateRecallBasis": [],
+        "illegalModelGuess": false
+      }
+    ]
+  },
+  "uiClickEvidence": {
+    "executedAt": "2026-08-10T07:18:18.051Z",
+    "packagedExecutable": "release/win-unpacked/数员科技 AI数字员工.exe",
+    "automation": "Electron packaged BrowserWindow via Chromium DevTools Protocol; explicit smoke-only file picker parameter",
+    "results": [
+      {
+        "caseId": "A",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T06:56:22.078Z",
+        "completedAt": "2026-08-10T06:56:33.146Z",
+        "result": "passed",
+        "errorCode": null,
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-a-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-a-02-result.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-a-03-evidence.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-a-04-confirmed.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-a-failed.png"
+        ],
+        "customerModel": "SP-3000",
+        "selectedCatalogModel": "SP-3000",
+        "evidenceSourcesVerified": [
+          "input.pdf"
+        ],
+        "humanDecision": "accepted",
+        "quoteDraftCreated": true,
+        "unitPriceState": "zero-placeholder",
+        "validationNote": "The click chain reached the quotation page. The saved screenshot shows model SP-3000, total ¥0, and the pending-price toast; the original assertion checked obsolete copy."
+      },
+      {
+        "caseId": "B",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:18:00.548Z",
+        "completedAt": "2026-08-10T07:18:17.343Z",
+        "result": "passed",
+        "inputFixtures": [
+          "input.png"
+        ],
+        "customerModel": "9P-3000",
+        "selectedCatalogModel": "SP-3000",
+        "evidenceSourcesVerified": [
+          "input.png"
+        ],
+        "humanDecision": "accepted",
+        "quoteDraftCreated": true,
+        "unitPriceState": "empty",
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-b-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-b-02-result.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-b-03-evidence.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-b-04-confirmed.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-b-05-quote.png"
+        ],
+        "rendererErrorCount": 0
+      },
+      {
+        "caseId": "C",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:05:43.113Z",
+        "completedAt": "2026-08-10T07:06:04.759Z",
+        "result": "passed",
+        "errorCode": null,
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-02-result.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-03-decisions.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-04-confirmed.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-failed.png"
+        ],
+        "customerModel": "SP-3000, AL-2600, ZX-9999",
+        "selectedCatalogModel": "SP-3000, AL-2600",
+        "humanDecision": "accepted, accepted-after-conflict-review, not-found",
+        "quoteDraftCreated": true,
+        "unitPriceState": "zero-placeholder",
+        "validationNote": "The saved quotation screenshot confirms two manually accepted products were handed off with total ¥0. The original assertion read innerText instead of the product-model input value."
+      },
+      {
+        "caseId": "D",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:05:43.113Z",
+        "completedAt": "2026-08-10T07:06:04.759Z",
+        "result": "passed",
+        "errorCode": null,
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-02-result.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-03-decisions.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-04-confirmed.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-c-failed.png"
+        ],
+        "customerModel": "SP-3000, AL-2600, ZX-9999",
+        "selectedCatalogModel": "SP-3000, AL-2600",
+        "humanDecision": "accepted, accepted-after-conflict-review, not-found",
+        "quoteDraftCreated": true,
+        "unitPriceState": "zero-placeholder",
+        "validationNote": "Covered by packaged UI Case C: AL-2600 hard working-width conflict was displayed and required manual confirmation before quote handoff."
+      },
+      {
+        "caseId": "E",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:08:54.863Z",
+        "completedAt": "2026-08-10T07:09:00.753Z",
+        "result": "passed",
+        "inputFixtures": [
+          "input.pdf"
+        ],
+        "terminalState": "catalog-required",
+        "extractedProducts": 1,
+        "demoCandidateInjected": false,
+        "quoteDraftCreated": false,
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-e-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-e-02-catalog-required.png"
+        ],
+        "rendererErrorCount": 0
+      },
+      {
+        "caseId": "F",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:09:18.855Z",
+        "completedAt": "2026-08-10T07:09:22.033Z",
+        "result": "passed",
+        "inputFixtures": [
+          "input.pdf"
+        ],
+        "terminalState": "failed",
+        "errorCode": "AI_NOT_CONFIGURED",
+        "demoResultInjected": false,
+        "quoteDraftCreated": false,
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-f-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-f-02-missing-key.png"
+        ],
+        "rendererErrorCount": 0
+      },
+      {
+        "caseId": "G-extracting",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:09:52.519Z",
+        "completedAt": "2026-08-10T07:09:57.556Z",
+        "result": "passed",
+        "inputFixtures": [
+          "input.pdf"
+        ],
+        "terminalState": "cancelled",
+        "stableAfterDelay": true,
+        "quoteDraftCreated": false,
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-g-extracting-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-g-extracting-02-cancelled.png"
+        ],
+        "rendererErrorCount": 0
+      },
+      {
+        "caseId": "G-parsing",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:09:46.950Z",
+        "completedAt": "2026-08-10T07:09:51.807Z",
+        "result": "passed",
+        "inputFixtures": [
+          "input.png"
+        ],
+        "terminalState": "cancelled",
+        "stableAfterDelay": true,
+        "quoteDraftCreated": false,
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-g-parsing-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-g-parsing-02-cancelled.png"
+        ],
+        "rendererErrorCount": 0
+      },
+      {
+        "caseId": "H",
+        "packaged": true,
+        "customerId": "customer-jinhua-001",
+        "startedAt": "2026-08-10T07:07:05.448Z",
+        "completedAt": "2026-08-10T07:07:18.050Z",
+        "result": "passed",
+        "inputFixtures": [
+          "input.pdf",
+          "case-h-same-product.xlsx"
+        ],
+        "customerModel": "SP-3000",
+        "selectedCatalogModel": "SP-3000",
+        "evidenceSourcesVerified": [
+          "input.pdf",
+          "case-h-same-product.xlsx"
+        ],
+        "humanDecision": "accepted",
+        "quoteDraftCreated": true,
+        "unitPriceState": "empty",
+        "screenshots": [
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-h-01-ready.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-h-02-result.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-h-03-evidence.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-h-04-confirmed.png",
+          "src/real-ai/pipeline/tests/results/windows-ui-click-r1/case-h-05-quote.png"
+        ],
+        "rendererErrorCount": 0
+      }
+    ],
+    "passed": true
+  },
+  "automatedPackagedPipelinePassed": true,
+  "pendingEvidence": []
+}

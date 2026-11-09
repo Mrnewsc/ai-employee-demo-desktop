@@ -10,27 +10,62 @@
   "main": "electron/main.cjs",
   "scripts": {
     "dev": "vite",
-    "electron:dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron electron/main.cjs\"",
+    "electron:dev": "npm run build:real-ai-worker && npm run build:real-ai-catalog && npm run build:real-ai-extraction && npm run build:real-ai-matching && concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron electron/main.cjs\"",
     "check": "tsc --noEmit",
-    "build": "tsc -b && vite build",
+    "build:real-ai-worker": "node scripts/real-ai/build-worker.mjs",
+    "build:real-ai-catalog": "node scripts/real-ai/build-catalog.mjs",
+    "build:real-ai-extraction": "node scripts/real-ai/build-extraction.mjs",
+    "build:real-ai-matching": "node scripts/real-ai/build-matching.mjs",
+    "build": "npm run build:real-ai-worker && npm run build:real-ai-catalog && npm run build:real-ai-extraction && npm run build:real-ai-matching && tsc -b && vite build",
+    "fixtures:real-ai": "node scripts/real-ai/generate-fixtures.mjs",
+    "fixtures:real-ai-extraction-r1": "node scripts/real-ai/generate-extraction-r1-fixtures.mjs",
+    "test:real-ai": "tsx --test --test-concurrency=1 src/real-ai/tests/*.test.ts",
+    "test:real-ai-service": "npm run build:real-ai-worker && node --test --test-concurrency=1 electron/real-ai/tests/*.test.cjs",
+    "test:real-ai-catalog": "tsx --test --test-concurrency=1 src/real-ai/catalog/tests/*.test.ts",
+    "test:real-ai-extraction": "tsx --test --test-concurrency=1 src/real-ai/extraction/tests/*.test.ts",
+    "test:catalog-management": "npm run build:real-ai-catalog && npm run build:real-ai-matching && node --test --test-concurrency=1 electron/catalog-management/tests/*.test.cjs && tsx --test --test-concurrency=1 src/catalog-management/*.test.ts",
+    "smoke:catalog-management:packaged": "node scripts/catalog-management/run-packaged-ui-smoke.mjs",
+    "validate:real-ai": "tsx scripts/real-ai/run-validation.ts",
+    "smoke:real-ai:electron": "npm run build:real-ai-worker && electron electron/main.cjs --real-ai-smoke --fixture-root=src/real-ai/fixtures --smoke-output=src/real-ai/tests/results/electron-development-smoke.json",
+    "smoke:real-ai:packaged": "node scripts/real-ai/run-packaged-smoke.mjs",
+    "smoke:real-ai:catalog:electron": "npm run build:real-ai-catalog && node scripts/real-ai/run-catalog-smoke.mjs --mode=development",
+    "smoke:real-ai:catalog:packaged": "node scripts/real-ai/run-catalog-smoke.mjs --mode=packaged",
+    "smoke:real-ai:extraction": "tsx scripts/real-ai/run-deepseek-extraction-smoke.ts",
     "capture:previews": "npm run build && node scripts/capture-previews.mjs",
-    "dist:win": "electron-builder --win --x64",
+    "dist:win": "npm run build:real-ai-worker && npm run build:real-ai-catalog && npm run build:real-ai-extraction && npm run build:real-ai-matching && electron-builder --win --x64",
     "dist:mac": "electron-builder --mac dmg zip --universal"
   },
   "dependencies": {
+    "@napi-rs/canvas": "^1.0.3",
+    "@tesseract.js-data/chi_sim": "^1.0.0",
     "@vitejs/plugin-react": "latest",
+    "file-type": "^22.0.1",
     "framer-motion": "12.42.2",
     "lucide-react": "1.24.0",
+    "mammoth": "^1.12.0",
+    "parse5": "^8.0.1",
+    "pdfjs-dist": "^6.2.108",
     "react": "latest",
     "react-dom": "latest",
-    "recharts": "3.9.2"
+    "recharts": "3.9.2",
+    "tesseract.js": "^7.0.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "yauzl": "^3.4.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.2",
+    "@types/node": "^26.1.2",
+    "@types/pdfkit": "^0.17.6",
+    "@types/yauzl": "^3.4.0",
     "concurrently": "latest",
+    "docx": "^9.7.1",
     "electron": "43.1.1",
     "electron-builder": "latest",
+    "esbuild": "^0.28.1",
+    "pdfkit": "^0.19.1",
     "tailwindcss": "4.3.2",
+    "tsx": "^4.23.10",
     "typescript": "latest",
     "vite": "8.1.5",
     "wait-on": "latest"
@@ -38,12 +73,51 @@
   "build": {
     "appId": "com.shuyuan.aiemployeedemo",
     "productName": "数员科技 AI数字员工",
-    "directories": { "output": "release" },
+    "directories": {
+      "output": "release"
+    },
     "electronDist": "node_modules/electron/dist",
-    "files": ["dist/**/*", "electron/**/*", "package.json"],
-    "win": { "target": "nsis", "signAndEditExecutable": false },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "electron/real-ai/workers/parser-worker.mjs",
+        "to": "real-ai/parser-worker.mjs"
+      },
+      {
+        "from": "node_modules/@tesseract.js-data/chi_sim/4.0.0_best_int/chi_sim.traineddata.gz",
+        "to": "real-ai/tessdata/chi_sim.traineddata.gz"
+      },
+      {
+        "from": "assets/templates/企业产品库标准导入模板.xlsx",
+        "to": "real-ai/templates/企业产品库标准导入模板.xlsx"
+      }
+    ],
+    "asarUnpack": [
+      "node_modules/@napi-rs/canvas/**",
+      "node_modules/@napi-rs/canvas-win32-x64-msvc/**",
+      "node_modules/@napi-rs/canvas-darwin-arm64/**",
+      "node_modules/@napi-rs/canvas-darwin-x64/**",
+      "node_modules/tesseract.js/**",
+      "node_modules/tesseract.js-core/**",
+      "node_modules/bmp-js/**",
+      "node_modules/is-url/**",
+      "node_modules/regenerator-runtime/**",
+      "node_modules/wasm-feature-detect/**",
+      "node_modules/zlibjs/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "signAndEditExecutable": false
+    },
     "mac": {
-      "target": ["dmg", "zip"],
+      "target": [
+        "dmg",
+        "zip"
+      ],
       "category": "public.app-category.business"
     }
   }

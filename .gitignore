@@ -9,5 +9,9 @@ vite.config.d.ts
 .tmp
 tmp
 *.log
+*.traineddata
+electron/real-ai/workers/parser-worker.mjs
+electron/real-ai/catalog/runtime/catalog-runtime.cjs
+electron/real-ai/extraction/runtime/extraction-runtime.cjs
 .DS_Store
 ai-employee-demo-install-*

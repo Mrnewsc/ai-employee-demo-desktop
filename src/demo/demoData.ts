@@ -1,5 +1,6 @@
 import type { CompanyProfile, ContentForm, GeneratedContent, PublishRecord, RoiInputs } from '../types';
 import { appConfig, platformNames } from '../config';
+import { coreDemoSalesCustomers, getTimelineEvent } from './demoSalesFlow';
 
 export const defaultCompany: CompanyProfile = {
   companyName: '浙江某智能装备有限公司',
@@ -84,9 +85,14 @@ export const defaultRoiInputs: RoiInputs = {
   grossProfit: 0,
 };
 
-export const demoLeads = [
-  { name: '金华某五金制品厂', source: '知乎', region: '浙江金华', product: '自动喷涂设备', action: '查看文章并发起咨询', intent: '高', status: '待报价', owner: '销售一组' },
-  { name: '义乌某机械有限公司', source: '小红书', region: '浙江义乌', product: '自动化生产线', action: '收藏文章', intent: '中', status: '待跟进', owner: '销售一组' },
-  { name: '佛山某家具制造企业', source: '今日头条', region: '广东佛山', product: '自动喷涂设备', action: '阅读并咨询交付', intent: '中高', status: 'AI接待中', owner: '待分配' },
-];
-
+export const demoLeads = coreDemoSalesCustomers.map((customer) => ({
+  customerId: customer.customerId,
+  name: customer.name,
+  source: customer.lead.source,
+  region: customer.region,
+  product: customer.demandProduct,
+  action: getTimelineEvent(customer, 'lead-created').label,
+  intent: customer.lead.intent,
+  status: customer.lead.status,
+  owner: customer.lead.owner,
+}));

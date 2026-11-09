@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "passed": true,
+  "phases": {
+    "phase1": {
+      "previewStatus": "ready",
+      "importedRows": 24,
+      "currentVersion": 1,
+      "productId": "JG-SP-3000"
+    },
+    "phase2": {
+      "reopenedVersion": 1,
+      "reopenedProductId": "JG-SP-3000",
+      "importedVersion": 2,
+      "changedContentObserved": true,
+      "rollbackVersion": 3,
+      "restoredContent": true
+    }
+  },
+  "packaged": false,
+  "userDataIsolation": true,
+  "catalogRootRelative": "real-ai\\product-catalog",
+  "versions": [
+    1,
+    2,
+    3
+  ],
+  "finalInfo": {
+    "schemaVersion": "1.0",
+    "currentVersion": 3,
+    "previousVersion": 2,
+    "productCount": 24,
+    "updatedAt": "2026-08-08T05:01:00.814Z"
+  },
+  "executedAt": "2026-08-08T05:01:00.867Z"
+}
