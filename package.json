@@ -118,7 +118,8 @@
         "dmg",
         "zip"
       ],
-      "category": "public.app-category.business"
+      "category": "public.app-category.business",
+      "x64ArchFiles": "*.node"
     }
   }
 }
