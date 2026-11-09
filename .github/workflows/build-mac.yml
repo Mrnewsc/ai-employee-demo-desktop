@@ -24,13 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install React type declarations
-        run: npm install --no-save @types/react @types/react-dom
-
-      - name: Install @napi-rs/canvas native binaries for both Mac archs
+      - name: Install type declarations and Mac native binaries (both archs)
         run: |
           CANVAS_VER=$(node -p "require('@napi-rs/canvas/package.json').version")
-          npm install --no-save --force "@napi-rs/canvas-darwin-arm64@$CANVAS_VER" "@napi-rs/canvas-darwin-x64@$CANVAS_VER"
+          npm install --no-save --force @types/react @types/react-dom "@napi-rs/canvas-darwin-arm64@$CANVAS_VER" "@napi-rs/canvas-darwin-x64@$CANVAS_VER"
           ls node_modules/@napi-rs/ | grep canvas
 
       - name: TypeScript check
